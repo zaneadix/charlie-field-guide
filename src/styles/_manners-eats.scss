@@ -1,0 +1,41 @@
+
+#manners, #eats {
+
+	padding: 0;
+	overflow: hidden;
+}
+
+
+#manners .left,
+#manners .right,
+#eats .left,
+#eats .right { padding: $section-padding; }
+
+
+#manners .right, #eats .left {
+
+	background-color: $seabone;
+	height: 100%;
+	padding-bottom: 3000px;
+	margin-bottom: -3000px;
+	background-image: $background-url;
+	background-size: 160%;
+	background-repeat: no-repeat;
+}
+
+
+#manners .left {
+
+	color: #FFF;
+	background-color: $oldpoop;
+
+	h3 { border-color: #FFF; }
+}
+
+#eats .right {
+
+	color: $oldpoop;
+	background-color: $oldsock;
+
+	h3 { border-color: $oldpoop; }
+}

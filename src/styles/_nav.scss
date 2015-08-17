@@ -1,0 +1,31 @@
+
+nav {
+
+	color            : #FFF;
+	height           : 75px;
+	background-color : $oldpoop;
+	font-family      : $display-text;
+
+	ul {
+
+		margin-top: 0;
+
+		li {
+			
+			width: 11.111111%;
+
+			a {
+
+				display : inline-block;
+				color   : #FFF;
+				margin  : 30px auto 0;
+
+				&:hover {
+
+					text-decoration : none;
+					color           : $dogdive;
+				}
+			}
+		}
+	}
+}

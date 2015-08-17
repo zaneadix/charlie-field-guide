@@ -1,0 +1,66 @@
+
+#quirks {
+
+	.quirks-block { border-bottom: 2px solid $oldpoop; }
+
+	ul {
+
+		li {
+
+			width      : 20%;
+			padding    : 0;
+			min-height : 230px;
+			position   : relative;
+			overflow   : hidden;
+			cursor     : pointer;
+
+			.text { display: none; }
+
+			.icon, .name { display: block; }
+
+			.icon {
+
+				width            : 100px;
+				height           : 100px;
+				background-color : $oldsock;
+				border-radius    : 50%;
+				margin           : 0 auto;
+			}
+
+			.name {
+
+				font-family: $display-text;
+				font-size: 1.6em;
+				margin-top: 20px;
+			}
+
+			&:after {
+
+				display       : inline-block;
+				position      : absolute;
+				bottom        : -20px;
+				left          : 50%;
+				margin-left   : -10px;
+				content       : "";
+				width         : 0; 
+				height        : 0;
+				border-left   : 20px solid transparent;
+				border-right  : 20px solid transparent;
+				border-bottom : 20px solid $oldpoop;
+
+				-webkit-transition : bottom .2s;
+				transition         : bottom .2s;
+			}
+
+			&.selected {
+
+				.icon { background-color: $oldpoop; }
+
+				&:after {
+
+					bottom: -5px;
+				}
+			}
+		}
+	}
+}

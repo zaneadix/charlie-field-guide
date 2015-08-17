@@ -1,0 +1,27 @@
+
+#eats {
+
+	padding: 0;
+	overflow: hidden;
+
+	.left, right { padding: $section-padding; }
+
+	.left { 
+
+		background-color: $seabone;
+		height: 100%;
+		padding-bottom: 3000px;
+		margin-bottom: -3000px;
+		background-image: $background-url;
+		background-size: 160%;
+		background-repeat: no-repeat;
+	}
+
+	.right {
+
+		color: #FFF;
+		background-color: $oldpoop;
+
+		h3 { border-color: #FFF; }
+	}
+}

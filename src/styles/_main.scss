@@ -1,0 +1,68 @@
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Sorts+Mill+Goudy:400,400italic);
+
+$display-text       : 'Montserrat', sans-serif;
+$content-text       : 'Sorts Mill Goudy', serif;
+$content-size       : 1.25em;
+$section-padding    : 60px 0 100px;
+$content-padding    : 0 60px;
+$content-margin-top : 40px;
+$background-url     : url("../images/topography@2x.png");
+
+* { font-size: 16px; }
+
+body {
+
+	font-family : $content-text;
+	font-size   : $content-size;
+	text-align  : center;
+	color       : $oldpoop;
+}
+
+p { 
+
+	padding: $content-padding;
+	margin-top: $content-margin-top;
+	line-height: 2.2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+	font-family    : $display-text;
+	letter-spacing : .25em;
+	text-transform : uppercase;
+	font-weight    : 700;
+
+	&.blocked {
+
+		border       : 3px solid $oldpoop;
+		display      : inline-block;
+		padding      : .7em;
+		padding-left : .8em;
+		min-width    : 300px;
+	}
+}
+
+h1 { font-size: 4em; }
+
+h3 { font-size: 1.75em; }
+
+section { padding: $section-padding; }
+
+ul {
+	
+	list-style    : none;
+	margin        : 60px auto 0;
+	padding       : 0;
+
+	li {
+
+		display : block;
+		float   : left;
+	}
+}
+
+
+
+
+

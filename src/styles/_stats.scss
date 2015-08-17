@@ -1,0 +1,62 @@
+
+#stats {
+
+	background-color: $oldsock;
+
+	.stats {
+
+		list-style : none;
+		padding    : 0;
+
+		li {
+
+			display : block;
+			float   : left;
+
+			.stat, .name { display: block; }
+
+			.stat { 
+				
+				font-family : $display-text;
+				font-size   : 4em;
+				font-weight : 700;
+
+				.sub {
+
+					font-size: .4em;
+				}
+			}
+
+			&.age {
+
+				width: 11%
+			}
+
+			&.length {
+
+				width: 13%
+			}
+
+			&.strength {
+
+				width: 22%
+			}
+
+			&.weight {
+
+				width: 15%
+			}
+
+			&.colors {
+
+				width: 13%
+			}
+
+			&.breed {
+
+				width: 26%
+			}
+
+		}
+	}
+}
