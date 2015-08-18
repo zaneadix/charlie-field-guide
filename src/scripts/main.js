@@ -1,5 +1,5 @@
 
-(function () {
+(function ($) {
 
 	'use strict';
 
@@ -8,15 +8,19 @@
 	 */
 	
 	var $document        = $(document),
+		$window 		 = $(window),
 		$header          = $('header'),
 		$nav             = $('nav'),
+		$progressBar	 = $nav.find('.percentage'),
 		$quirks          = $('.quirks li'),
 		$forewordSection = $('#foreword'),
 		$toysSection     = $('#toys');
 
+	var progressOffset = $nav.height();
+
 
 	/**
-	 * 	SCROLL STUFF
+	 * 	WINDOW STUFF
 	 */
 
 	$document.scroll(function () {
@@ -24,8 +28,36 @@
 		checkStickyNav();
 
 		monitorProgress();
-	})
+	});
 
+
+	$window.resize(function () {
+
+		trickHeight();
+
+		setNavBlocks();
+
+		monitorProgress();
+	});
+
+
+	/**
+	 * 	NAV STUFF
+	 */
+	
+	$nav.find('a').on('click', function () {
+
+		var scrollTo = $(this).attr('scrollTo');
+
+		var offset = (scrollTo == 'foreword' ? 0 : progressOffset);
+
+	    $('html, body').animate({
+
+	        scrollTop: $('#' + scrollTo).offset().top - offset
+
+	    }, 1000);
+
+	});
 
 	function checkStickyNav () {
 		
@@ -42,8 +74,71 @@
 
 	function monitorProgress () {
 
-		
+		var scrollTop = $document.scrollTop();
+
+		$('.progress-block').each(function (index) {
+
+			var $this = $(this);
+			var top   = parseInt($this.attr('top'));
+			var start = parseInt($this.attr('start'));
+
+			if (scrollTop > top) {
+
+				$this.width($this.attr('block-width') + '%');
+
+			} else if (scrollTop > start) {
+
+				var height = top - start;
+				var diff = scrollTop - start;
+
+				var percentage = (diff / height) * parseInt($this.attr('block-width'));
+
+				$this.width(percentage + '%');
+
+			} else {
+
+				$this.width(0);
+			}
+		});
 	}
+
+
+	function setNavBlocks () {
+
+		var $progress      = $('#progress');
+		var $blocks        = $('.nav-block');
+		var blockWidth     = 100 / ($blocks.length);
+		
+		var lastHeight     = 0;
+
+		$progress.empty();
+
+		$blocks.each(function (index) {
+
+			var $this = $(this);
+
+			var top = $this.offset().top;
+
+			var block = $('<div></div>')
+						.addClass('progress-block')
+						.attr('start', lastHeight)
+						.attr('top', index === 0 ? top : top - progressOffset)
+						.attr('block-width', index === 0 ? (blockWidth/2) : blockWidth);
+
+			lastHeight = index === 0 ? top : top - progressOffset;
+
+			$progress.append(block);
+		});
+
+		var block = $('<div></div>')
+					.addClass('progress-block')
+					.attr('start', lastHeight)
+					.attr('top', lastHeight + 200)
+					.attr('block-width', (blockWidth/2));
+
+		$progress.append(block);
+	}
+
 
 	/**
 	 *	QUIRKS
@@ -82,11 +177,6 @@
 	/**
 	 * 	TRICKS
 	 */
-	
-	$(window).resize(function () {
-
-		trickHeight();
-	});
 
 	function trickHeight () {
 
@@ -102,5 +192,6 @@
 
 	 trickHeight();
 
-})(jQuery);
+	 setNavBlocks();
 
+})(jQuery);

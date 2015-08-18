@@ -57,7 +57,7 @@
 
 	    }, 1000);
 
-	})
+	});
 
 	function checkStickyNav () {
 		
@@ -122,10 +122,10 @@
 			var block = $('<div></div>')
 						.addClass('progress-block')
 						.attr('start', lastHeight)
-						.attr('top', index == 0 ? top : top - progressOffset)
-						.attr('block-width', index == 0 ? (blockWidth/2) : blockWidth);
+						.attr('top', index === 0 ? top : top - progressOffset)
+						.attr('block-width', index === 0 ? (blockWidth/2) : blockWidth);
 
-			lastHeight = index == 0 ? top : top - progressOffset
+			lastHeight = index === 0 ? top : top - progressOffset;
 
 			$progress.append(block);
 		});
@@ -137,7 +137,7 @@
 					.attr('block-width', (blockWidth/2));
 
 		$progress.append(block);
-	};
+	}
 
 
 	/**
@@ -195,4 +195,3 @@
 	 setNavBlocks();
 
 })(jQuery);
-
