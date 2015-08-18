@@ -3,16 +3,23 @@
 
 $display-text       : 'Montserrat', sans-serif;
 $content-text       : 'Sorts Mill Goudy', serif;
+$nav-top			: 717px;
 $content-size       : 1.25em;
 $section-padding    : 60px 0 100px;
 $content-padding    : 0 60px;
 $content-margin-top : 40px;
 $background-url     : url("../images/topography@2x.png");
 
+$seabone: #DFEFEF;
+$oldsock: #E1E6E9;
+$oldpoop: #566D77;
+$dogdive: #65FBE2;
+
 * { font-size: 16px; }
 
-body {
+body, html {
 
+	position: relative;
 	font-family : $content-text;
 	font-size   : $content-size;
 	text-align  : center;

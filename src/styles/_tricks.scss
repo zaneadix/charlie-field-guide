@@ -1,13 +1,16 @@
 
 #tricks {
 
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
+	padding-left   : 0px;
+	padding-right  : 0px;
+	padding-bottom : 0px;
 
 	.trick {
 
-		height: 60px;
-		background-color: $oldsock;
+		height       : 300px;
+		box-sizing   : border-box;
+		border-top   : 2px $oldsock solid;
+		border-right : 1px $oldsock solid;
+		border-left  : 1px $oldsock solid;
 	}
 }

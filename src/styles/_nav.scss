@@ -5,6 +5,10 @@ nav {
 	height           : 75px;
 	background-color : $oldpoop;
 	font-family      : $display-text;
+	position         : absolute;
+	top              : $nav-top;
+	left             : 0px;
+	right            : 0px;
 
 	ul {
 
@@ -18,7 +22,8 @@ nav {
 
 				display : inline-block;
 				color   : #FFF;
-				margin  : 30px auto 0;
+				margin  : 24px auto 0;
+				font-size: .9em;
 
 				&:hover {
 
@@ -26,6 +31,37 @@ nav {
 					color           : $dogdive;
 				}
 			}
+		}
+	}
+
+	&.sticky {
+
+		position: fixed;
+		width: 100%;
+		z-index: 200;
+		top: 0;
+		left: 0;
+	}
+
+	#progress, .progress-block {
+
+		height: 7px;
+		margin: 0;
+		padding: 0;
+	}
+
+	#progress {
+
+		width: 100%;
+		// background-color: $oldsock;
+		position: absolute;
+		bottom: 0px;
+		
+		.progress-block {
+
+			background-color: $dogdive;
+			width: 0;
+			float: left;
 		}
 	}
 }

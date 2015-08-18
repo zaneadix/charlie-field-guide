@@ -3,7 +3,8 @@
   font-size: 16px;
 }
 
-body {
+body, html {
+  position: relative;
   font-family: "Sorts Mill Goudy", serif;
   font-size: 1.25em;
   text-align: center;
@@ -57,7 +58,7 @@ ul li {
 header {
   background-color: #E1E6E9;
   text-transform: uppercase;
-  height: 710px;
+  height: 717px;
   color: #566D77;
   background-image: url("../images/topography@2x.png");
   background-size: cover;
@@ -86,11 +87,26 @@ header .title p {
   letter-spacing: .5em;
 }
 
+footer {
+  background-color: #566D77;
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer p {
+  font-size: 1.2em;
+  margin: 80px 0;
+}
+
 nav {
   color: #FFF;
   height: 75px;
   background-color: #566D77;
   font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 717px;
+  left: 0px;
+  right: 0px;
 }
 
 nav ul {
@@ -104,12 +120,43 @@ nav ul li {
 nav ul li a {
   display: inline-block;
   color: #FFF;
-  margin: 30px auto 0;
+  margin: 24px auto 0;
+  font-size: .9em;
 }
 
 nav ul li a:hover {
   text-decoration: none;
   color: #65FBE2;
+}
+
+nav.sticky {
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+  top: 0;
+  left: 0;
+}
+
+nav #progress, nav .progress-block {
+  height: 7px;
+  margin: 0;
+  padding: 0;
+}
+
+nav #progress {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+nav #progress .progress-block {
+  background-color: #65FBE2;
+  width: 0;
+  float: left;
+}
+
+#foreword {
+  padding-top: 135px;
 }
 
 #foreword p {
@@ -170,7 +217,7 @@ nav ul li a:hover {
   width: 26%;
 }
 
-#manners, #eats {
+#manners, #eats, #walks, #pets {
   padding: 0;
   overflow: hidden;
 }
@@ -178,11 +225,15 @@ nav ul li a:hover {
 #manners .left,
 #manners .right,
 #eats .left,
-#eats .right {
+#eats .right,
+#walks .left,
+#walks .right,
+#pets .left,
+#pets .right {
   padding: 60px 0 100px;
 }
 
-#manners .right, #eats .left {
+#manners .right, #eats .left, #pets .left {
   background-color: #DFEFEF;
   height: 100%;
   padding-bottom: 3000px;
@@ -192,29 +243,25 @@ nav ul li a:hover {
   background-repeat: no-repeat;
 }
 
-#manners .left {
+#manners .left, #walks .left {
   color: #FFF;
   background-color: #566D77;
 }
 
-#manners .left h3 {
+#manners .left h3, #walks .left h3 {
   border-color: #FFF;
 }
 
-#eats .right {
+#eats .right, #pets .right {
   color: #566D77;
   background-color: #E1E6E9;
 }
 
-#eats .right h3 {
+#eats .right h3, #pets .right h3 {
   border-color: #566D77;
 }
 
-#quirks .quirks-block {
-  border-bottom: 2px solid #566D77;
-}
-
-#quirks ul li {
+#quirks ul li, #toys ul li {
   width: 20%;
   padding: 0;
   min-height: 230px;
@@ -223,50 +270,81 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-#quirks ul li .text {
+#quirks ul li .text, #toys ul li .text {
   display: none;
 }
 
-#quirks ul li .icon, #quirks ul li .name {
+#quirks ul li .icon, #quirks ul li .name, #toys ul li .icon, #toys ul li .name {
   display: block;
 }
 
-#quirks ul li .icon {
+#quirks ul li .icon, #toys ul li .icon {
   width: 100px;
   height: 100px;
-  background-color: #E1E6E9;
   border-radius: 50%;
   margin: 0 auto;
 }
 
-#quirks ul li .name {
+#quirks ul li .name, #toys ul li .name {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6em;
   margin-top: 20px;
 }
 
-#quirks ul li:after {
+#quirks ul li:after, #toys ul li:after {
   display: inline-block;
   position: absolute;
   bottom: -20px;
   left: 50%;
-  margin-left: -10px;
+  margin-left: -20px;
   content: "";
   width: 0;
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 20px solid #566D77;
   -webkit-transition: bottom 0.2s;
   transition: bottom 0.2s;
 }
 
-#quirks ul li.selected .icon {
+#quirks ul li.selected .icon, #toys ul li.selected .icon {
+  background-color: #65FBE2;
+}
+
+#quirks ul li.selected:after, #toys ul li.selected:after {
+  bottom: -5px;
+}
+
+#quirks .quirks-block {
+  border-bottom: 2px solid #566D77;
+}
+
+#quirks ul li .icon {
+  background-color: #E1E6E9;
+}
+
+#quirks ul li:after {
+  border-bottom: 20px solid #566D77;
+}
+
+#toys {
+  color: #FFF;
   background-color: #566D77;
 }
 
-#quirks ul li.selected:after {
-  bottom: -5px;
+#toys h3 {
+  border-color: #FFF;
+}
+
+#toys .toys-block {
+  border-bottom: 2px solid #FFF;
+}
+
+#toys ul li .icon {
+  background-color: #FFF;
+}
+
+#toys ul li:after {
+  border-bottom: 20px solid #FFF;
 }
 
 #tricks {
@@ -276,6 +354,9 @@ nav ul li a:hover {
 }
 
 #tricks .trick {
-  height: 60px;
-  background-color: #E1E6E9;
+  height: 300px;
+  box-sizing: border-box;
+  border-top: 2px #E1E6E9 solid;
+  border-right: 1px #E1E6E9 solid;
+  border-left: 1px #E1E6E9 solid;
 }

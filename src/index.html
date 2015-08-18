@@ -35,29 +35,31 @@
 			
 			<ul>
 
-				<li><a href="">Foreword</a></li>
+				<li><a scrollto="foreword">Foreword</a></li>
 
-				<li><a href="">Stats</a></li>
+				<li><a scrollTo="stats">Stats</a></li>
 
-				<li><a href="">Manners</a></li>
+				<li><a scrollto="manners">Manners</a></li>
 
-				<li><a href="">Quirks</a></li>
+				<li><a scrollto="quirks">Quirks</a></li>
 
-				<li><a href="">Eats</a></li>
+				<li><a scrollto="eats">Eats</a></li>
 
-				<li><a href="">Walks</a></li>
+				<li><a scrollto="walks">Walks</a></li>
 
-				<li><a href="">Pets</a></li>
+				<li><a scrollto="pets">Pets</a></li>
 
-				<li><a href="">Tricks</a></li>
+				<li><a scrollto="tricks">Tricks</a></li>
 
-				<li><a href="">Toys</a></li>
+				<li><a scrollto="toys">Toys</a></li>
 
 			</ul>
 
+			<div id="progress">  </div>
+
 		</nav>
 
-		<section id="foreword" class="container">
+		<section id="foreword" class="container nav-block">
 			
 			<h3 class="blocked">Foreword</h3>
 
@@ -65,7 +67,7 @@
 
 		</section>
 
-		<section id="stats" class="container-fluid">
+		<section id="stats" class="container-fluid nav-block">
 
 			<div class="container">
 
@@ -122,7 +124,7 @@
 		</section>
 
 
-		<section id="manners" class="container-fluid">
+		<section id="manners" class="container-fluid nav-block">
 			
 			<div class="left col-md-6">
 				
@@ -140,7 +142,7 @@
 		</section>
 
 
-		<section id="quirks" class="container-fluid">
+		<section id="quirks" class="container-fluid nav-block">
 			
 			<h3 class="blocked">Quirks</h3>
 
@@ -198,7 +200,7 @@
 		</section>
 
 
-		<section class="container-fluid" id="eats">
+		<section class="container-fluid nav-block" id="eats">
 			
 			<div class="left col-md-6">
 				
@@ -216,45 +218,151 @@
 		</section>
 
 
-		<section id="tricks" class="container-fluid">
+		<section class="container-fluid nav-block" id="walks">
+			
+			<div class="left col-md-6">
+				
+				<h3 class="blocked">Walks</h3>
+
+				<p>Goat danish fontina stinking bishop. Croque monsieur cheddar emmental fromage fromage boursin cheese and wine edam. Halloumi hard cheese swiss jarlsberg lancashire croque monsieur macaroni cheese manchego. Roquefort who moved my cheese chalk and cheese caerphilly say cheese cheddar taleggio cheesy feet. Manchego chalk and cheese swiss. Cheddar jarlsberg lancashire. Roquefort manchego fondue ricotta blue castello squirty cheese cauliflower cheese jarlsberg. Cheese slices halloumi pecorino stinking bishop edam cheese and wine say cheese pepper jack. Camembert de normandie melted cheese edam.</p>
+				
+			</div>
+
+			<div class="right col-md-6">
+				
+				
+			</div>
+
+		</section>
+
+
+		<section class="container-fluid nav-block" id="pets">
+			
+			<div class="left col-md-6">
+				
+				
+			</div>
+
+			<div class="right col-md-6">
+				
+				<h3 class="blocked">Pets</h3>
+
+				<p>Goat danish fontina stinking bishop. Croque monsieur cheddar emmental fromage fromage boursin cheese and wine edam. Halloumi hard cheese swiss jarlsberg lancashire croque monsieur macaroni cheese manchego. Roquefort who moved my cheese chalk and cheese caerphilly say cheese cheddar taleggio cheesy feet. Manchego chalk and cheese swiss. Cheddar jarlsberg lancashire. Roquefort manchego fondue ricotta blue castello squirty cheese cauliflower cheese jarlsberg. Cheese slices halloumi pecorino stinking bishop edam cheese and wine say cheese pepper jack. Camembert de normandie melted cheese edam.</p>
+
+			</div>
+
+		</section>
+
+
+		<section id="tricks" class="container-fluid nav-block">
 			
 			<h3 class="blocked">Tricks</h3>
 
 			<p class="container">When Charlie completes one of these commands, always reward him with praise + pet or a cookie. Never both. They are equally weighted. No one should be praised for eating a cookie. </p>
 
-			<div class="col-med-4 trick">
+			<div class="col-xs-6 col-md-3 trick">
 
 			</div>
 
-			<div class="col-med-4 trick">
+			<div class="col-xs-6 col-md-3 trick">
 				
 			</div>
 
-			<div class="col-med-4 trick">
+			<div class="col-xs-6 col-md-3 trick">
 				
 			</div>
 
-			<div class="col-med-4 trick">
+			<div class="col-xs-6 col-md-3 trick">
 				
 			</div>
 
-			<div class="col-med-4 trick">
+			<div class="col-xs-6 col-md-3 trick">
 				
 			</div>
 
-			<div class="col-med-4 trick">
+			<div class="col-xs-6 col-md-3 trick">
 				
 			</div>
 
-			<div class="col-med-4 trick">
+			<div class="col-xs-6 col-md-3 trick">
 				
 			</div>
 
-			<div class="col-med-4 trick">
+			<div class="col-xs-6 col-md-3 trick">
 				
 			</div>
 
 		</section>
+
+
+		<section id="toys" class="container-fluid nav-block">
+			
+			<h3 class="blocked">Toys</h3>
+
+			<div class="container toys-block">
+				
+				<ul class="toys">
+				
+					<li class="selected">
+
+						<span class="icon"></span>
+						<span class="name">Rope</span>
+						<p class="text">Charlie literally has thousands of kisses ready to deploy per minute. It can become an impediment in your relationship with Charlie if you don’t determine boundaries. Usually thanking him and a stern “that’s enough” should work.</p>
+
+					</li>
+
+					<li>
+
+						<span class="icon"></span>
+						<span class="name">Ball</span>
+						<p class="text">Warning. Super still dogs are a sign of waiting for your food to drop or the kind of concentration that is about to explode into </p>
+
+					</li>
+
+					<li>
+
+						<span class="icon"></span>
+						<span class="name">Stick</span>
+						<p class="text">Charlie has a built-in alarm when he senses peril anywhere in the world, but more specifically on the other side of the door. Also triggered by strangers near or in the house, cats being rowdy, mailmen, any loud sound and literally fire alarms (smoke detectors).</p>
+
+					</li>
+
+					<li>
+
+						<span class="icon"></span>
+						<span class="name">Chewy</span>
+						<p class="text">Rough housing, cat wrestling, outside voices inside the type of activities that will lure out Charlie the Safety. He will use the Fire Alarm to.</p>
+
+					</li>
+
+					<li>
+
+						<span class="icon"></span>
+						<span class="name">Things Tied In Knots</span>
+						<p class="text">Imagine you live in the country and that you and Charlie are a primitive form of protection from the elements.  You’re going to the thing that gets leaned on and your job will be to.</p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+			<p id="toy-text" class="container">Charlie literally has thousands of kisses ready to deploy per minute. It can become an impediment in your relationship with Charlie if you don’t determine boundaries. Usually thanking him and a stern “that’s enough” should work.</p>
+			
+
+		</section>
+
+
+		<section id="map" class="container-fluid">
+			
+		</section>
+
+
+		<footer class="container-fluid">
+			
+			<p>All rights reserved Quartle Castle 2015.</p>
+
+		</footer>
 		
 		
 		<!-- build:js scripts/vendor.js -->

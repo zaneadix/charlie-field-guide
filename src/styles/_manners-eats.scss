@@ -1,5 +1,5 @@
 
-#manners, #eats {
+#manners, #eats, #walks, #pets {
 
 	padding: 0;
 	overflow: hidden;
@@ -9,10 +9,14 @@
 #manners .left,
 #manners .right,
 #eats .left,
-#eats .right { padding: $section-padding; }
+#eats .right,
+#walks .left,
+#walks .right,
+#pets .left,
+#pets .right { padding: $section-padding; }
 
 
-#manners .right, #eats .left {
+#manners .right, #eats .left, #pets .left {
 
 	background-color: $seabone;
 	height: 100%;
@@ -24,7 +28,7 @@
 }
 
 
-#manners .left {
+#manners .left, #walks .left {
 
 	color: #FFF;
 	background-color: $oldpoop;
@@ -32,7 +36,7 @@
 	h3 { border-color: #FFF; }
 }
 
-#eats .right {
+#eats .right, #pets .right {
 
 	color: $oldpoop;
 	background-color: $oldsock;
