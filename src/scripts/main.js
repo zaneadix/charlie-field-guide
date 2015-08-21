@@ -1,5 +1,6 @@
 
-$(document).ready( (function () {
+(function ($) {
+
 
 	'use strict';
 
@@ -40,10 +41,6 @@ $(document).ready( (function () {
 		monitorProgress();
 	});
 
-
-	/**
-	 * 	NAV STUFF
-	 */
 	
 	$nav.find('a').on('click', function () {
 
@@ -58,6 +55,7 @@ $(document).ready( (function () {
 	    }, 1000);
 
 	});
+
 
 	function checkStickyNav () {
 		
@@ -91,7 +89,8 @@ $(document).ready( (function () {
 				var height = top - start;
 				var diff = scrollTop - start;
 
-				var percentage = (diff / height) * parseInt($this.attr('block-width'));
+
+				var percentage = (diff / height) * parseFloat($this.attr('block-width'));
 
 				$this.width(percentage + '%');
 
@@ -108,8 +107,9 @@ $(document).ready( (function () {
 		var $progress      = $('#progress');
 		var $blocks        = $('.nav-block');
 		var blockWidth     = 100 / ($blocks.length);
-		
 		var lastHeight     = 0;
+
+		progressOffset = $nav.height();
 
 		$progress.empty();
 
@@ -119,26 +119,26 @@ $(document).ready( (function () {
 
 			var top = $this.offset().top;
 
-			var block = $('<div></div>')
+			var $block = $('<div></div>')
 						.addClass('progress-block')
 						.attr('start', lastHeight)
 						.attr('top', index === 0 ? top : top - progressOffset)
 						.attr('block-width', index === 0 ? (blockWidth/2) : blockWidth);
 
-			console.log(top);
+			console.log($block.attr('start'));
 
 			lastHeight = index === 0 ? top : top - progressOffset;
 
-			$progress.append(block);
+			$progress.append($block);
 		});
 
-		var block = $('<div></div>')
+		var $block = $('<div></div>')
 					.addClass('progress-block')
 					.attr('start', lastHeight)
 					.attr('top', lastHeight + 200)
 					.attr('block-width', (blockWidth/2));
 
-		$progress.append(block);
+		$progress.append($block);
 	}
 
 
@@ -185,6 +185,8 @@ $(document).ready( (function () {
 		var $trick = $('.trick');
 
 		$trick.height($trick.width());
+
+		console.log($trick.width(), $trick.height());
 	}
 
 
@@ -192,14 +194,12 @@ $(document).ready( (function () {
 	 * 	INITIALIZE
 	 */
 
+	trickHeight();
+
+	$(window).load(function() {
+		
+	    setNavBlocks();
+	});
 	 
 
-	 setNavBlocks();
-
-	 trickHeight();
-
-	 setNavBlocks();
-
-}));
-
-
+})(jQuery);
