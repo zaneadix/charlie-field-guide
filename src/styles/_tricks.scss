@@ -17,23 +17,75 @@
 		overflow     : hidden;
 		transition   : all .7s;
 
+		@media (max-width: 992px) { 
+
+			height  : 200px;
+			padding : 0 20%;
+		}
+
 		.detail {
+
+			.left { 
+
+				@media (max-width: 992px) { 
+
+					float: left;
+					width: 30%;
+				}
+			}
+
+			.right { 
+				
+				@media (max-width: 992px) { 
+
+					float: right; 
+					width: 50%;
+					margin-top: 30px;
+				}
+			}
 
 			.icon, hr, p { @include transition( all .7s) }
 			
 			.icon { 
 
 				margin           : 80px auto 40px;
-				height           : 100px;
-				width            : 100px;
 				background-color : $oldpoop;
+
+				@media (max-width: 1350px) { margin-top: 60px; }
+
+				@media (max-width: 1150px) { margin-top: 50px; }
+
+				@media (max-width: 1100px) { margin-top: 40px; }
+
+				@media (max-width: 992px) { 
+
+					margin-top    : 30px;
+					margin-bottom : 30px; 
+				}
 
 				img {
 
-					width: 120%;
-					height: auto;
-					margin-left: -20%
+					&.wide {
+
+						width  : 110%;
+						height : auto;
+					}
+
+					&.high {
+
+						height : 110%;
+						width  : auto;
+					}
+
+					&.left { margin-left: -10%; }
+
+					&.right { margin-right: -10%; }
+
+					&.up { margin-top: -20%; }
+
+					&.down { margin-top: 20%; }
 				}
+
 			}
 
 			p, hr { opacity: 0; }
@@ -45,26 +97,52 @@
 				background-color : $oldpoop;
 				margin           : 30px auto;
 				border-width     : 0;
+
+				@media (max-width: 1350px) { margin: 20px auto; }
+
+				@media (max-width: 1275px) { margin: 15px auto; }
+
+				@media (max-width: 1125px) { margin: 5px auto; }
+
+				@media (max-width: 992px) { display: none; }
 			}
 
 			p { 
 				
-				padding    : 0 40px; 
+				padding    : 0 30px; 
 				margin-top : 0px;
+
+				@media (max-width: 1275px) { padding: 0 10px; }
+
+				@media (max-width: 1100px) { padding: 0 0px; }
+
+				@media (max-width: 1150px) { line-height: 1.9em; }
+
+				@media (max-width: 992px) { opacity: 1;}
+
 			}
 		}
 
-		&:hover {
+		@media (min-width: 992px) { 
 
-			background-color: $dogdive;
+			&:hover {
 
-			.icon {
+				background-color: $dogdive;
 
-				margin  : -120px auto 60px;
-				opacity : 0;
+				.icon {
+
+					margin  : -120px auto 60px;
+					opacity : 0;
+
+					@media (max-width: 1350px) { margin-bottom: 50px; }
+
+					@media (max-width: 1200px) { margin-top: -130px; }
+
+					@media (max-width: 1100px) { margin-top: -135px; }
+				}
+
+				p, hr { opacity: 1; }
 			}
-
-			p, hr { opacity: 1; }
 		}
 	}
 }

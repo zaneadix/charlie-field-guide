@@ -184,9 +184,14 @@
 
 		var $trick = $('.trick');
 
-		$trick.height($trick.width());
+		if ($window.width() > 992) {
 
-		console.log($trick.width(), $trick.height());
+			$trick.height($trick.width());
+
+		} else {
+
+			$trick.height(200);
+		}
 	}
 
 
