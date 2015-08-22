@@ -10,6 +10,10 @@ nav {
 	left             : 0px;
 	right            : 0px;
 
+	@media (max-width: 1200px) { top: $nav-top-med; }
+
+	@media (max-width: 950px) { top: $nav-top-small; }
+
 	ul {
 
 		margin-top: 0;
@@ -55,6 +59,7 @@ nav {
 		width: 100%;
 		position: absolute;
 		bottom: 0px;
+		background-color: rgba(101, 251, 226, .4);
 		
 		.progress-block {
 

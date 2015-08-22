@@ -5,7 +5,10 @@
 	padding-right  : 0px;
 	padding-bottom : 0px;
 
-	p { margin-bottom: 40px; }
+	p { 
+		margin-bottom: 40px; 
+		padding: $fluid-content-padding;
+	}
 
 	.trick {
 
@@ -40,7 +43,7 @@
 
 					float: right; 
 					width: 50%;
-					margin-top: 30px;
+					margin-top: 50px;
 				}
 			}
 
@@ -92,7 +95,7 @@
 
 			hr { 
 
-				width            : 40%;
+				width            : 20%;
 				height           : 3px;
 				background-color : $oldpoop;
 				margin           : 30px auto;
@@ -102,14 +105,14 @@
 
 				@media (max-width: 1275px) { margin: 15px auto; }
 
-				@media (max-width: 1125px) { margin: 5px auto; }
+				@media (max-width: 1125px) { margin: 15px auto; }
 
 				@media (max-width: 992px) { display: none; }
 			}
 
 			p { 
 				
-				padding    : 0 30px; 
+				// padding    : 0 30px; 
 				margin-top : 0px;
 
 				@media (max-width: 1275px) { padding: 0 10px; }
@@ -118,7 +121,7 @@
 
 				@media (max-width: 1150px) { line-height: 1.9em; }
 
-				@media (max-width: 992px) { opacity: 1;}
+				@media (max-width: 992px) { opacity: 1; }
 
 			}
 		}

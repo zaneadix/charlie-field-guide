@@ -6,15 +6,35 @@
 body, html {
   position: relative;
   font-family: "Sorts Mill Goudy", serif;
-  font-size: 1.25em;
   text-align: center;
   color: #566D77;
+}
+
+@media (max-width: 992px) {
+  body, html {
+    font-size: 0.9em;
+  }
 }
 
 p {
   padding: 0 60px;
   margin-top: 40px;
   line-height: 2.2em;
+  font-size: 1em;
+}
+
+@media (max-width: 1200px) {
+  p {
+    margin-top: 30px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 992px) {
+  p {
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,8 +48,16 @@ h1.blocked, h2.blocked, h3.blocked, h4.blocked, h5.blocked, h6.blocked {
   border: 3px solid #566D77;
   display: inline-block;
   padding: .7em;
-  padding-left: .8em;
+  padding-left: .9em;
   min-width: 300px;
+}
+
+@media (max-width: 992px) {
+  h1.blocked, h2.blocked, h3.blocked, h4.blocked, h5.blocked, h6.blocked {
+    padding: .6em;
+    padding-left: .9em;
+    min-width: 220px;
+  }
 }
 
 h1 {
@@ -40,8 +68,26 @@ h3 {
   font-size: 1.75em;
 }
 
+@media (max-width: 992px) {
+  h3 {
+    font-size: 1.4em;
+  }
+}
+
 section {
   padding: 60px 0 100px;
+}
+
+@media (max-width: 1200px) {
+  section {
+    padding: 40px 0 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  section {
+    padding: 20px 0 50px;
+  }
 }
 
 ul {
@@ -64,6 +110,13 @@ ul li {
   background-color: #E1E6E9;
 }
 
+@media (max-width: 1200px) {
+  .icon {
+    width: 95px;
+    height: 95px;
+  }
+}
+
 @media (max-width: 992px) {
   .icon {
     width: 90px;
@@ -74,11 +127,25 @@ ul li {
 header {
   background-color: #E1E6E9;
   text-transform: uppercase;
-  height: 717px;
+  height: 680px;
   color: #566D77;
   background-image: url("../images/topography@2x.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 1200px) {
+  header {
+    height: 550px;
+    background-size: 130%;
+  }
+}
+
+@media (max-width: 950px) {
+  header {
+    height: 500px;
+    background-size: 130%;
+  }
 }
 
 header .title {
@@ -90,7 +157,7 @@ header .title {
 }
 
 header .title h1 {
-  margin: 10px 0 30px;
+  margin: 10px 0 30px 3%;
   font-size: 7.5em;
   font-weight: 700;
   letter-spacing: .25em;
@@ -103,9 +170,31 @@ header .title p {
   letter-spacing: .5em;
 }
 
+@media (max-width: 1200px) {
+  header .title {
+    padding: 60px 0;
+  }
+  header .title h1 {
+    font-size: 6em;
+  }
+  header .title p {
+    font-size: 1.9em;
+  }
+}
+
+@media (max-width: 950px) {
+  header .title {
+    padding: 60px 0;
+  }
+  header .title h1 {
+    font-size: 4.5em;
+  }
+  header .title p {
+    font-size: 1.4em;
+  }
+}
+
 footer {
-  background-color: #566D77;
-  color: #FFF;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -120,9 +209,21 @@ nav {
   background-color: #566D77;
   font-family: "Montserrat", sans-serif;
   position: absolute;
-  top: 717px;
+  top: 680px;
   left: 0px;
   right: 0px;
+}
+
+@media (max-width: 1200px) {
+  nav {
+    top: 550px;
+  }
+}
+
+@media (max-width: 950px) {
+  nav {
+    top: 500px;
+  }
 }
 
 nav ul {
@@ -163,6 +264,7 @@ nav #progress {
   width: 100%;
   position: absolute;
   bottom: 0px;
+  background-color: rgba(101, 251, 226, 0.4);
 }
 
 nav #progress .progress-block {
@@ -175,10 +277,20 @@ nav #progress .progress-block {
   padding-top: 135px;
 }
 
+@media (max-width: 1200px) {
+  #foreword {
+    padding-top: 115px;
+  }
+}
+
+@media (max-width: 992px) {
+  #foreword {
+    padding-top: 95px;
+  }
+}
+
 #foreword p {
-  margin-top: 40px;
-  line-height: 2.2em;
-  padding: 0 60px;
+  padding: 0 200px;
 }
 
 #stats {
@@ -190,9 +302,21 @@ nav #progress .progress-block {
   padding: 0;
 }
 
+@media (max-width: 992px) {
+  #stats .stats {
+    margin-top: 0px;
+  }
+}
+
 #stats .stats li {
   display: block;
   float: left;
+}
+
+@media (max-width: 992px) {
+  #stats .stats li {
+    margin-top: 40px;
+  }
 }
 
 #stats .stats li .stat, #stats .stats li .name {
@@ -205,20 +329,44 @@ nav #progress .progress-block {
   font-weight: 700;
 }
 
+@media (max-width: 1200px) {
+  #stats .stats li .stat {
+    font-size: 3.4em;
+  }
+}
+
+@media (max-width: 992px) {
+  #stats .stats li .stat {
+    font-size: 2.7em;
+  }
+}
+
 #stats .stats li .stat .sub {
   font-size: .4em;
 }
 
+@media (max-width: 1200px) {
+  #stats .stats li .name {
+    font-size: .9em;
+  }
+}
+
+@media (max-width: 992px) {
+  #stats .stats li .name {
+    font-size: .8em;
+  }
+}
+
 #stats .stats li.age {
-  width: 11%;
+  width: 8%;
 }
 
 #stats .stats li.length {
-  width: 13%;
+  width: 15%;
 }
 
 #stats .stats li.strength {
-  width: 22%;
+  width: 23%;
 }
 
 #stats .stats li.weight {
@@ -226,11 +374,22 @@ nav #progress .progress-block {
 }
 
 #stats .stats li.colors {
-  width: 13%;
+  width: 10%;
 }
 
 #stats .stats li.breed {
-  width: 26%;
+  width: 29%;
+}
+
+@media (max-width: 992px) {
+  #stats .stats li.age,
+  #stats .stats li.length,
+  #stats .stats li.strength,
+  #stats .stats li.weight,
+  #stats .stats li.colors,
+  #stats .stats li.breed {
+    width: 33.33333%;
+  }
 }
 
 #manners, #eats, #walks, #pets {
@@ -247,6 +406,42 @@ nav #progress .progress-block {
 #pets .left,
 #pets .right {
   padding: 60px 0 100px;
+}
+
+@media (max-width: 1200px) {
+  #manners .left,
+  #manners .right,
+  #eats .left,
+  #eats .right,
+  #walks .left,
+  #walks .right,
+  #pets .left,
+  #pets .right {
+    padding: 40px 0 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  #manners .left,
+  #manners .right,
+  #eats .left,
+  #eats .right,
+  #walks .left,
+  #walks .right,
+  #pets .left,
+  #pets .right {
+    padding: 20px 0 50px;
+  }
+  #manners .left p,
+  #manners .right p,
+  #eats .left p,
+  #eats .right p,
+  #walks .left p,
+  #walks .right p,
+  #pets .left p,
+  #pets .right p {
+    padding: 0 200px;
+  }
 }
 
 #manners .right, #eats .left, #pets .left {
@@ -275,6 +470,10 @@ nav #progress .progress-block {
 
 #eats .right h3, #pets .right h3 {
   border-color: #566D77;
+}
+
+#quirks p, #toys p {
+  padding: 0 200px;
 }
 
 #quirks ul li, #toys ul li {
@@ -360,6 +559,7 @@ nav #progress .progress-block {
 
 #tricks p {
   margin-bottom: 40px;
+  padding: 0 200px;
 }
 
 #tricks .trick {
@@ -390,7 +590,7 @@ nav #progress .progress-block {
   #tricks .trick .detail .right {
     float: right;
     width: 50%;
-    margin-top: 30px;
+    margin-top: 50px;
   }
 }
 
@@ -462,7 +662,7 @@ nav #progress .progress-block {
 }
 
 #tricks .trick .detail hr {
-  width: 40%;
+  width: 20%;
   height: 3px;
   background-color: #566D77;
   margin: 30px auto;
@@ -483,7 +683,7 @@ nav #progress .progress-block {
 
 @media (max-width: 1125px) {
   #tricks .trick .detail hr {
-    margin: 5px auto;
+    margin: 15px auto;
   }
 }
 
@@ -494,7 +694,6 @@ nav #progress .progress-block {
 }
 
 #tricks .trick .detail p {
-  padding: 0 30px;
   margin-top: 0px;
 }
 

@@ -8,10 +8,14 @@
 		list-style : none;
 		padding    : 0;
 
+		@media (max-width: 992px) { margin-top: 0px;  }
+
 		li {
 
 			display : block;
 			float   : left;
+
+			@media (max-width: 992px) { margin-top: 40px;  }
 
 			.stat, .name { display: block; }
 
@@ -21,42 +25,47 @@
 				font-size   : 4em;
 				font-weight : 700;
 
+				@media (max-width: 1200px) { font-size: 3.4em;  }
+
+				@media (max-width: 992px) { font-size: 2.7em;  }
+
 				.sub {
 
 					font-size: .4em;
 				}
 			}
 
-			&.age {
+			.name {
 
-				width: 11%
+				@media (max-width: 1200px) { font-size: .9em;  }
+
+				@media (max-width: 992px) { font-size: .8em;  }
 			}
 
-			&.length {
+			&.age { width: 8%; }
 
-				width: 13%
+			&.length { width: 15%; }
+
+			&.strength { width: 23%; }
+
+			&.weight { width: 15%; }
+
+			&.colors { width: 10%; }
+
+			&.breed { width: 29%; }
+
+			@media (max-width: 992px) { 
+
+				&.age, 
+				&.length, 
+				&.strength, 
+				&.weight, 
+				&.colors, 
+				&.breed {
+
+					width: 33.33333%;
+				}
 			}
-
-			&.strength {
-
-				width: 22%
-			}
-
-			&.weight {
-
-				width: 15%
-			}
-
-			&.colors {
-
-				width: 13%
-			}
-
-			&.breed {
-
-				width: 26%
-			}
-
 		}
 	}
 }

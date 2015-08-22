@@ -13,7 +13,19 @@
 #walks .left,
 #walks .right,
 #pets .left,
-#pets .right { padding: $section-padding; }
+#pets .right { 
+
+	padding: $section-padding;
+	
+	@media (max-width: 1200px) { padding: $section-padding-med; }
+
+	@media (max-width: 992px) { 
+
+		padding: $section-padding-small; 
+		
+		p { padding: $fluid-content-padding; }
+	}
+}
 
 
 #manners .right, #eats .left, #pets .left {

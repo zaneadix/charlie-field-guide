@@ -9,6 +9,18 @@ header {
 	background-size   : cover;
 	background-repeat : no-repeat;
 
+	@media (max-width: 1200px) { 
+
+		height          : $nav-top-med; 
+		background-size : 130%;
+	}
+
+	@media (max-width: 950px) { 
+
+		height          : $nav-top-small; 
+		background-size : 130%;
+	}
+
 	.title {
 
 		margin  : 7.21875% auto 0;
@@ -18,8 +30,8 @@ header {
 		border  : 4px solid $oldpoop;
 
 		h1 {
-
-			margin         : 10px 0 30px;
+			
+			margin         : 10px 0 30px 3%;
 			font-size      : 7.5em;
 			font-weight    : 700;
 			letter-spacing : .25em;
@@ -31,14 +43,32 @@ header {
 			font-size      : 2.4em;
 			letter-spacing : .5em;
 		}
+
+		@media (max-width: 1200px) {
+
+			padding : 60px 0;
+
+			h1 { font-size: 6em; };
+
+			p { font-size: 1.9em; }; 
+		}
+
+		@media (max-width: 950px) {
+
+			padding : 60px 0;
+
+			h1 { font-size: 4.5em; };
+
+			p { font-size: 1.4em; }; 
+		}
 	}
 }
 
 
 footer {
 
-	background-color : $oldpoop;
-	color            : #FFF;
+	// background-color : $oldpoop;
+	// color            : #FFF;
 	font-family      : $display-text;
 
 	p {

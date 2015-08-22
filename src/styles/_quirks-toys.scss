@@ -1,6 +1,8 @@
 
 #quirks, #toys {
 
+	p { padding: $fluid-content-padding; }
+
 	ul li {
 
 		width      : 20%;
