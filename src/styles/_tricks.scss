@@ -6,8 +6,13 @@
 	padding-bottom : 0px;
 
 	p { 
-		margin-bottom: 40px; 
+		margin-bottom: 40px;
+
 		padding: $fluid-content-padding;
+
+		@media (max-width: 1200px) { padding: $fluid-content-padding-med;}
+
+		@media (max-width: 992px) { padding: $fluid-content-padding-small; }
 	}
 
 	.trick {
@@ -33,7 +38,7 @@
 				@media (max-width: 992px) { 
 
 					float: left;
-					width: 30%;
+					// width: 30%;
 				}
 			}
 
@@ -65,30 +70,6 @@
 					margin-top    : 30px;
 					margin-bottom : 30px; 
 				}
-
-				img {
-
-					&.wide {
-
-						width  : 110%;
-						height : auto;
-					}
-
-					&.high {
-
-						height : 110%;
-						width  : auto;
-					}
-
-					&.left { margin-left: -10%; }
-
-					&.right { margin-right: -10%; }
-
-					&.up { margin-top: -20%; }
-
-					&.down { margin-top: 20%; }
-				}
-
 			}
 
 			p, hr { opacity: 0; }
@@ -112,7 +93,7 @@
 
 			p { 
 				
-				// padding    : 0 30px; 
+				padding    : 0 30px; 
 				margin-top : 0px;
 
 				@media (max-width: 1275px) { padding: 0 10px; }

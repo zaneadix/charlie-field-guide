@@ -13,7 +13,9 @@ var src = {
 	
 	styles  : 'src/styles/**/*.scss',
 	
-	scripts : 'src/scripts/**/*.js'
+	scripts : 'src/scripts/**/*.js',
+
+	images : 'src/images/**.*'
 }
 
 var dist = {
@@ -22,7 +24,9 @@ var dist = {
 	
 	styles  : 'dist/styles',
 	
-	scripts : 'dist/scripts'
+	scripts : 'dist/scripts',
+
+	images : 'dist/images'
 }
 
 gulp.task('html', function () {
@@ -57,6 +61,12 @@ gulp.task('styles', function () {
 		.pipe(connect.reload());
 })
 
+gulp.task('images', function () {
+
+	gulp.src(src.images)
+		.pipe(gulp.dest(dist.images));
+})
+
 gulp.task('connect', function () {
 
 	connect.server({
@@ -74,6 +84,6 @@ gulp.task('watch', function () {
 	gulp.watch(src.styles, ['styles']);
 })
 
-gulp.task('default', ['html', 'styles', 'scripts']);
+gulp.task('default', ['html', 'styles', 'scripts', 'images']);
 
 gulp.task('start', ['default', 'connect', 'watch']);

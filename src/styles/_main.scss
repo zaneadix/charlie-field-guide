@@ -8,8 +8,8 @@ $nav-top			: 680px;
 $nav-top-med		: 550px;
 $nav-top-small		: 500px;
 
-$content-size       : 1em;
-$content-size-med   : .9em;
+$content-size       : 1.1em;
+$content-size-med   : 1em;
 $content-size-small : .9em;
 
 $section-padding       : 60px 0 100px;
@@ -17,13 +17,17 @@ $section-padding-med   : 40px 0 80px;
 $section-padding-small : 20px 0 50px;
 
 $content-padding       : 0 60px;
-$fluid-content-padding : 0 200px;
+
+$fluid-content-padding       : 0 200px;
+$fluid-content-padding-med   : 0 140px;
+$fluid-content-padding-small : 0 80px;
 
 $content-margin-top       : 40px;
 $content-margin-top-med   : 30px;
 $content-margin-top-small : 20px;
 
-$background-url     : url("../images/topography@2x.png");
+$background-url      : url("../images/topography@2x.png");
+$blue-background-url : url("../images/topography-BLUE@2x.png");
 
 $seabone: #DFEFEF;
 $oldsock: #E1E6E9;
@@ -51,16 +55,14 @@ p {
 
 	@media (max-width: 1200px) { 
 
-		margin-top: $content-margin-top-med; 
-		
-		font-size: $content-size-med;
+		margin-top : $content-margin-top-med; 
+		font-size  : $content-size-med;
 	}
 
 	@media (max-width: 992px) { 
 
-		margin-top: $content-margin-top-small; 
-		
-		font-size: $content-size-small;
+		margin-top : $content-margin-top-small; 
+		font-size  : $content-size-small;
 	}
 }
 
@@ -127,6 +129,7 @@ ul {
 	border-radius    : 50%;
 	margin           : 0 auto;
 	background-color : $oldsock;
+	overflow         : visible;
 
 	@media (max-width: 1200px) { 
 
@@ -138,6 +141,33 @@ ul {
 		
 		width  : 90px;
 		height : 90px;
+	}
+
+	img {
+
+		&.wide {
+
+			width  : 110%;
+			height : auto;
+		}
+
+		&.wide-shrink { width: 90%; }
+
+		&.high {
+
+			height : 110%;
+			width  : auto;
+		}
+
+		&.left { margin-left: -10%; }
+
+		&.right { margin-right: -10%; }
+
+		&.up { margin-top: -20%; }
+
+		&.up-half { margin-top: -10%; }
+
+		&.down { margin-top: 20%; }
 	}
 }
 

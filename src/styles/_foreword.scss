@@ -3,9 +3,19 @@
 
 	padding-top: 135px;
 
-	@media (max-width: 1200px) { padding-top: 115px; }
-
-	@media (max-width: 992px) { padding-top: 95px; }
-
 	p { padding: $fluid-content-padding; }
+
+	@media (max-width: 1200px) { 
+
+		padding-top: 115px; 
+		
+		p { padding: $fluid-content-padding-med; }
+	}
+
+	@media (max-width: 992px) { 
+
+		padding-top: 95px;
+
+		p { padding: $fluid-content-padding-small; }
+	}
 }

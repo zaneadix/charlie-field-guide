@@ -1,8 +1,8 @@
 
 #manners, #eats, #walks, #pets {
 
-	padding: 0;
-	overflow: hidden;
+	padding  : 0;
+	overflow : hidden;
 }
 
 
@@ -17,26 +17,29 @@
 
 	padding: $section-padding;
 	
-	@media (max-width: 1200px) { padding: $section-padding-med; }
+	@media (max-width: 1200px) { 
+
+		padding: $section-padding-med; 
+	}
 
 	@media (max-width: 992px) { 
 
 		padding: $section-padding-small; 
 		
-		p { padding: $fluid-content-padding; }
+		p { padding: $fluid-content-padding-small; }
 	}
 }
 
 
 #manners .right, #eats .left, #pets .left {
 
-	background-color: $seabone;
-	height: 100%;
-	padding-bottom: 3000px;
-	margin-bottom: -3000px;
-	background-image: $background-url;
-	background-size: 160%;
-	background-repeat: no-repeat;
+	background-color  : $seabone;
+	height            : 100%;
+	padding-bottom    : 3000px;
+	margin-bottom     : -3000px;
+	background-image  : $blue-background-url;
+	background-size   : 200%;
+	background-repeat : no-repeat;
 }
 
 
@@ -48,10 +51,113 @@
 	h3 { border-color: #FFF; }
 }
 
+#eats, #pets {
+
+	.col-md-6 { float: none; }
+
+	.right { 
+
+		float: right; 
+		
+		@media (max-width: 992px) { float: none; }
+	}
+}
+
 #eats .right, #pets .right {
 
-	color: $oldpoop;
-	background-color: $oldsock;
+	color            : $oldpoop;
+	background-color : $oldsock;
 
 	h3 { border-color: $oldpoop; }
+}
+
+#manners {
+
+	h2 { margin-top: 50px; }
+
+	h4 { 
+
+		margin-top: 30px;
+		text-transform: none;
+	}
+
+	.definition {
+
+		font-style: italic;
+		margin-top: 30px;
+	}
+
+	@media (max-width: 992px) {
+
+		.left { padding-bottom: 10px;}
+
+		h2 {
+
+			font-size  : 1.3em;
+			margin-top : 10px;
+		}
+
+		p.definition { 
+
+			margin-bottom: 50px; 
+		}
+	}
+}
+
+#eats {
+
+	img { width: 60%; height: auto;}
+}
+
+#pets {
+
+	.right {
+
+		@media (max-width: 992px) { 
+
+			padding-bottom: 10px;
+		}
+	}
+
+	img { max-width: 350px; height: auto; }
+
+	ul {
+
+		padding : 0 10%;
+		width   : 100%;
+
+		@media (max-width: 1200px) { padding : 0 6%; }
+
+		@media (max-width: 992px) { 
+
+			padding : 30px 0 40px;
+			width   : 450px;
+			margin  : 30px auto 50px;
+		}
+
+		li {
+			
+			width          : 50%;
+			font-size      : 1.2em;
+			font-family    : $display-text;
+			text-transform : uppercase;
+
+			@media (max-width: 1200px) { font-size: 1.1em; }
+
+			&:before {
+
+				display       : inline-block;
+				content       : "";
+				border-radius : 50%;
+				height        : 22px;
+				width         : 22px;
+				border        : 1px solid $oldpoop;
+				margin-right  : 10px;
+			}
+
+			&.yes:before { background-color: #98A6AC; }
+
+			&.no:before { background-color: $oldsock; }
+		}
+	}
 }

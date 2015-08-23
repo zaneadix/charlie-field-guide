@@ -1,26 +1,34 @@
 
 #quirks, #toys {
 
-	p { padding: $fluid-content-padding; }
+	p { padding: $fluid-content-padding-small; }
 
 	ul li {
 
-		width      : 20%;
-		padding    : 0;
-		min-height : 230px;
-		position   : relative;
-		overflow   : hidden;
-		cursor     : pointer;
+		width       : 20%;
+		padding     : 0;
+		min-height  : 210px;
+		position    : relative;
+		overflow    : hidden;
+		cursor      : pointer;
+		padding-top : 10px;
 
 		.text { display: none; }
 
 		.icon, .name { display: block; }
+
+		.icon { background-color: $seabone; }
 
 		.name {
 
 			font-family : $display-text;
 			font-size   : 1.6em;
 			margin-top  : 20px;
+			padding: 0 10px;
+
+			@media (max-width: 1200px) { font-size: 1.4em; }
+
+			@media (max-width: 992px) { font-size: 1.2em; }
 		}
 
 		&:after {
