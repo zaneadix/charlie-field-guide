@@ -5,7 +5,6 @@
 
 	ul li {
 
-		width       : 20%;
 		padding     : 0;
 		min-height  : 210px;
 		position    : relative;
@@ -60,7 +59,12 @@
 
 	.quirks-block { border-bottom: 2px solid $oldpoop; }
 
-	ul li:after { border-bottom : 20px solid $oldpoop; }
+	ul li {
+
+		width: 20%;
+
+		&:after { border-bottom : 20px solid $oldpoop; }
+	}
 }
 
 
@@ -74,6 +78,8 @@
 	.toys-block { border-bottom: 2px solid #FFF; }
 
 	ul li {
+
+		width: 25%;
 
 		.icon { background-color : #FFF; }
 

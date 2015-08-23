@@ -159,6 +159,11 @@ ul {
 			width  : auto;
 		}
 
+		&.high-small {
+
+			height: 90%;
+		}
+
 		&.left { margin-left: -10%; }
 
 		&.right { margin-right: -10%; }
@@ -168,6 +173,8 @@ ul {
 		&.up-half { margin-top: -10%; }
 
 		&.down { margin-top: 20%; }
+
+		&.down-half { margin-top: 5%; }
 	}
 }
 
