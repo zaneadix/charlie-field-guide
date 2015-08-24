@@ -38,7 +38,7 @@
 
 		setNavBlocks();
 
-		monitorProgress();
+		// monitorProgress();
 	});
 
 	
@@ -139,6 +139,8 @@
 					.attr('block-width', (blockWidth/2));
 
 		$progress.append($block);
+
+		monitorProgress();
 	}
 
 
@@ -156,6 +158,8 @@
 		$this.addClass('selected');
 
 		$('#quirk-text').text($text.text());
+
+		setNavBlocks();
 	});
 
 
@@ -173,6 +177,8 @@
 		$this.addClass('selected');
 
 		$('#toy-text').text($text.text());
+
+		setNavBlocks();
 	});
 
 
@@ -197,6 +203,8 @@
 		$right.find('.icon').html($icon.html());
 		$right.find('.name').text($name.text());
 		$right.find('.text').text($text.text());
+
+		setNavBlocks();
 	});
 
 
