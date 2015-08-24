@@ -177,6 +177,30 @@
 
 
 	/**
+	 *	WALKS
+	 */
+
+	$('.walks li').on('mouseover', function (e) {
+
+		$('.walks li').removeClass('selected');
+
+		var $this 	  = $(this),
+			$right    = $('#walks').find('.right'),
+			$icon     = $this.find('.icon'),
+			$name     = $this.find('.name'),
+			$text     = $this.find('.text');
+
+		console.log($right);
+
+		$this.addClass('selected');
+
+		$right.find('.icon').html($icon.html());
+		$right.find('.name').text($name.text());
+		$right.find('.text').text($text.text());
+	});
+
+
+	/**
 	 * 	TRICKS
 	 */
 

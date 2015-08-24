@@ -109,7 +109,7 @@
 
 		@media (min-width: 992px) { 
 
-			&:hover {
+			&:hover, &:focus {
 
 				background-color: $dogdive;
 

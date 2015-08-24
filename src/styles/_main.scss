@@ -12,8 +12,8 @@ $content-size       : 1.1em;
 $content-size-med   : 1em;
 $content-size-small : .9em;
 
-$section-padding       : 60px 0 100px;
-$section-padding-med   : 40px 0 80px;
+$section-padding       : 60px 0 70px;
+$section-padding-med   : 40px 0 60px;
 $section-padding-small : 20px 0 50px;
 
 $content-padding       : 0 60px;
@@ -28,6 +28,7 @@ $content-margin-top-small : 20px;
 
 $background-url      : url("../images/topography@2x.png");
 $blue-background-url : url("../images/topography-BLUE@2x.png");
+$gray-background-url : url("../images/topography-gray@2x.png");
 
 $seabone: #DFEFEF;
 $oldsock: #E1E6E9;
@@ -81,6 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 		padding-left : .9em;
 		min-width    : 300px;
 
+
 		@media (max-width: 992px) { 
 
 			padding      : .6em;
@@ -97,6 +99,13 @@ h3 {
 	font-size: 1.75em; 
 	
 	@media (max-width: 992px) { font-size: 1.4em;  }
+}
+
+strong {
+	
+	font-weight: 700;
+	font-family: $display-text;
+	text-transform: uppercase;
 }
 
 section { 
@@ -128,7 +137,7 @@ ul {
 	height           : 100px;
 	border-radius    : 50%;
 	margin           : 0 auto;
-	background-color : $oldsock;
+	background-color : #FFF;
 	overflow         : visible;
 
 	@media (max-width: 1200px) { 
@@ -144,6 +153,8 @@ ul {
 	}
 
 	img {
+
+		width: 100%;
 
 		&.wide {
 

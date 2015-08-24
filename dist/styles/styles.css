@@ -74,13 +74,19 @@ h3 {
   }
 }
 
+strong {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
 section {
-  padding: 60px 0 100px;
+  padding: 60px 0 70px;
 }
 
 @media (max-width: 1200px) {
   section {
-    padding: 40px 0 80px;
+    padding: 40px 0 60px;
   }
 }
 
@@ -107,7 +113,7 @@ ul li {
   height: 100px;
   border-radius: 50%;
   margin: 0 auto;
-  background-color: #E1E6E9;
+  background-color: #FFF;
   overflow: visible;
 }
 
@@ -123,6 +129,10 @@ ul li {
     width: 90px;
     height: 90px;
   }
+}
+
+.icon img {
+  width: 100%;
 }
 
 .icon img.wide {
@@ -441,205 +451,11 @@ nav #progress .progress-block {
   }
 }
 
-#manners, #eats, #walks, #pets {
-  padding: 0;
-  overflow: hidden;
-}
-
-#manners .left,
-#manners .right,
-#eats .left,
-#eats .right,
-#walks .left,
-#walks .right,
-#pets .left,
-#pets .right {
-  padding: 60px 0 100px;
-}
-
-@media (max-width: 1200px) {
-  #manners .left,
-  #manners .right,
-  #eats .left,
-  #eats .right,
-  #walks .left,
-  #walks .right,
-  #pets .left,
-  #pets .right {
-    padding: 40px 0 80px;
-  }
-}
-
-@media (max-width: 992px) {
-  #manners .left,
-  #manners .right,
-  #eats .left,
-  #eats .right,
-  #walks .left,
-  #walks .right,
-  #pets .left,
-  #pets .right {
-    padding: 20px 0 50px;
-  }
-  #manners .left p,
-  #manners .right p,
-  #eats .left p,
-  #eats .right p,
-  #walks .left p,
-  #walks .right p,
-  #pets .left p,
-  #pets .right p {
-    padding: 0 80px;
-  }
-}
-
-#manners .right, #eats .left, #pets .left {
-  background-color: #DFEFEF;
-  height: 100%;
-  padding-bottom: 3000px;
-  margin-bottom: -3000px;
-  background-image: url("../images/topography-BLUE@2x.png");
-  background-size: 200%;
-  background-repeat: no-repeat;
-}
-
-#manners .left, #walks .left {
-  color: #FFF;
-  background-color: #566D77;
-}
-
-#manners .left h3, #walks .left h3 {
-  border-color: #FFF;
-}
-
-#eats .col-md-6, #pets .col-md-6 {
-  float: none;
-}
-
-#eats .right, #pets .right {
-  float: right;
-}
-
-@media (max-width: 992px) {
-  #eats .right, #pets .right {
-    float: none;
-  }
-}
-
-#eats .right, #pets .right {
-  color: #566D77;
-  background-color: #E1E6E9;
-}
-
-#eats .right h3, #pets .right h3 {
-  border-color: #566D77;
-}
-
-#manners h2 {
-  margin-top: 50px;
-}
-
-#manners h4 {
-  margin-top: 30px;
-  text-transform: none;
-}
-
-#manners .definition {
-  font-style: italic;
-  margin-top: 30px;
-}
-
-@media (max-width: 992px) {
-  #manners .left {
-    padding-bottom: 10px;
-  }
-  #manners h2 {
-    font-size: 1.3em;
-    margin-top: 10px;
-  }
-  #manners p.definition {
-    margin-bottom: 50px;
-  }
-}
-
-#eats img {
-  width: 60%;
-  height: auto;
-}
-
-@media (max-width: 992px) {
-  #pets .right {
-    padding-bottom: 10px;
-  }
-}
-
-#pets img {
-  max-width: 350px;
-  height: auto;
-}
-
-@media (max-width: 992px) {
-  #pets img {
-    padding-bottom: 10px;
-    width: 300px;
-  }
-}
-
-#pets ul {
-  padding: 0 10%;
-  width: 100%;
-}
-
-@media (max-width: 1200px) {
-  #pets ul {
-    padding: 0 6%;
-  }
-}
-
-@media (max-width: 992px) {
-  #pets ul {
-    padding: 30px 0 40px;
-    width: 350px;
-    margin: 30px auto 50px;
-  }
-}
-
-#pets ul li {
-  width: 50%;
-  font-size: 1.2em;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-}
-
-@media (max-width: 1200px) {
-  #pets ul li {
-    font-size: .8em;
-  }
-}
-
-#pets ul li:before {
-  display: inline-block;
-  content: "";
-  border-radius: 50%;
-  height: 22px;
-  width: 22px;
-  border: 1px solid #566D77;
-  margin-right: 10px;
-}
-
-#pets ul li.yes:before {
-  background-color: #98A6AC;
-}
-
-#pets ul li.no:before {
-  background-color: #E1E6E9;
-}
-
-#quirks p, #toys p {
+#quirks p, #toys p, #walks p {
   padding: 0 80px;
 }
 
-#quirks ul li, #toys ul li {
+#quirks ul li, #toys ul li, #walks ul li {
   padding: 0;
   min-height: 210px;
   position: relative;
@@ -648,38 +464,25 @@ nav #progress .progress-block {
   padding-top: 10px;
 }
 
-#quirks ul li .text, #toys ul li .text {
+#quirks ul li .text, #toys ul li .text, #walks ul li .text {
   display: none;
 }
 
-#quirks ul li .icon, #quirks ul li .name, #toys ul li .icon, #toys ul li .name {
+#quirks ul li .icon, #quirks ul li .name, #toys ul li .icon, #toys ul li .name, #walks ul li .icon, #walks ul li .name {
   display: block;
 }
 
-#quirks ul li .icon, #toys ul li .icon {
+#quirks ul li .icon, #toys ul li .icon, #walks ul li .icon {
   background-color: #DFEFEF;
 }
 
-#quirks ul li .name, #toys ul li .name {
+#quirks ul li .name, #toys ul li .name, #walks ul li .name {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.6em;
   margin-top: 20px;
   padding: 0 10px;
 }
 
-@media (max-width: 1200px) {
-  #quirks ul li .name, #toys ul li .name {
-    font-size: 1.4em;
-  }
-}
-
-@media (max-width: 992px) {
-  #quirks ul li .name, #toys ul li .name {
-    font-size: 1.2em;
-  }
-}
-
-#quirks ul li:after, #toys ul li:after {
+#quirks ul li:after, #toys ul li:after, #walks ul li:after {
   display: inline-block;
   position: absolute;
   bottom: -20px;
@@ -694,11 +497,11 @@ nav #progress .progress-block {
   transition: bottom 0.2s;
 }
 
-#quirks ul li.selected .icon, #toys ul li.selected .icon {
+#quirks ul li.selected .icon, #toys ul li.selected .icon, #walks ul li.selected .icon {
   background-color: #65FBE2;
 }
 
-#quirks ul li.selected:after, #toys ul li.selected:after {
+#quirks ul li.selected:after, #toys ul li.selected:after, #walks ul li.selected:after {
   bottom: -5px;
 }
 
@@ -737,6 +540,16 @@ nav #progress .progress-block {
 
 #toys ul li:after {
   border-bottom: 20px solid #FFF;
+}
+
+#walks ul {
+  margin: 0 auto;
+  width: 70%;
+}
+
+#walks ul li {
+  width: 50%;
+  min-height: 50px;
 }
 
 #tricks {
@@ -896,35 +709,258 @@ nav #progress .progress-block {
 }
 
 @media (min-width: 992px) {
-  #tricks .trick:hover {
+  #tricks .trick:hover, #tricks .trick:focus {
     background-color: #65FBE2;
   }
-  #tricks .trick:hover .icon {
+  #tricks .trick:hover .icon, #tricks .trick:focus .icon {
     margin: -120px auto 60px;
     opacity: 0;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1350px) {
-  #tricks .trick:hover .icon {
+  #tricks .trick:hover .icon, #tricks .trick:focus .icon {
     margin-bottom: 50px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-  #tricks .trick:hover .icon {
+  #tricks .trick:hover .icon, #tricks .trick:focus .icon {
     margin-top: -130px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1100px) {
-  #tricks .trick:hover .icon {
+  #tricks .trick:hover .icon, #tricks .trick:focus .icon {
     margin-top: -135px;
   }
 }
 
 @media (min-width: 992px) {
-  #tricks .trick:hover p, #tricks .trick:hover hr {
+  #tricks .trick:hover p, #tricks .trick:hover hr, #tricks .trick:focus p, #tricks .trick:focus hr {
     opacity: 1;
   }
+}
+
+#manners, #eats, #walks, #pets {
+  padding: 0;
+  overflow: hidden;
+}
+
+#manners div.left,
+#manners div.right,
+#eats div.left,
+#eats div.right,
+#walks div.left,
+#walks div.right,
+#pets div.left,
+#pets div.right {
+  padding: 60px 0 70px;
+}
+
+@media (max-width: 1200px) {
+  #manners div.left,
+  #manners div.right,
+  #eats div.left,
+  #eats div.right,
+  #walks div.left,
+  #walks div.right,
+  #pets div.left,
+  #pets div.right {
+    padding: 40px 0 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  #manners div.left,
+  #manners div.right,
+  #eats div.left,
+  #eats div.right,
+  #walks div.left,
+  #walks div.right,
+  #pets div.left,
+  #pets div.right {
+    padding: 20px 0 50px;
+  }
+  #manners div.left p,
+  #manners div.right p,
+  #eats div.left p,
+  #eats div.right p,
+  #walks div.left p,
+  #walks div.right p,
+  #pets div.left p,
+  #pets div.right p {
+    padding: 0 80px;
+  }
+}
+
+#manners div.right, #eats div.left, #pets div.left, #walks div.right {
+  background-color: #DFEFEF;
+  height: 100%;
+  padding-bottom: 3000px;
+  margin-bottom: -3000px;
+  background-image: url("../images/topography-BLUE@2x.png");
+  background-size: 240%;
+  background-repeat: no-repeat;
+}
+
+#manners div.left, #walks div.left {
+  color: #FFF;
+  background-color: #566D77;
+}
+
+#manners div.left h3, #walks div.left h3 {
+  border-color: #FFF;
+}
+
+#eats .col-md-6, #pets .col-md-6 {
+  float: none;
+}
+
+#eats .right, #pets .right {
+  float: right;
+}
+
+@media (max-width: 992px) {
+  #eats .right, #pets .right {
+    float: none;
+  }
+}
+
+#eats .right, #pets .right {
+  color: #566D77;
+  background-color: #E1E6E9;
+}
+
+#eats .right h3, #pets .right h3 {
+  border-color: #566D77;
+}
+
+#eats h4, #manners h4 {
+  margin-top: 30px;
+  text-transform: none;
+}
+
+#eats .definition, #manners .definition {
+  font-style: italic;
+  margin-top: 30px;
+}
+
+@media (max-width: 992px) {
+  #eats h2, #manners h2 {
+    font-size: 1.3em;
+    margin-top: 10px;
+  }
+  #eats p.definition, #manners p.definition {
+    margin-bottom: 50px;
+  }
+}
+
+#manners h2 {
+  margin-top: 50px;
+}
+
+#eats img {
+  max-width: 300px;
+  height: auto;
+}
+
+#eats h2 {
+  margin-top: 60px;
+}
+
+#eats .title {
+  margin: 20px 0 0;
+}
+
+#eats .description {
+  margin: 0;
+}
+
+#pets .right {
+  padding-bottom: 3000px;
+  margin-bottom: -3000px;
+}
+
+#pets img {
+  max-width: 320px;
+  height: auto;
+}
+
+@media (max-width: 992px) {
+  #pets img {
+    padding-bottom: 10px;
+    width: 300px;
+  }
+}
+
+#pets ul {
+  padding: 0 10%;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  #pets ul {
+    padding: 0 6%;
+  }
+}
+
+@media (max-width: 992px) {
+  #pets ul {
+    padding: 30px 0 40px;
+    width: 350px;
+    margin: 0px auto 50px;
+  }
+}
+
+#pets ul li {
+  width: 50%;
+  font-size: 1.2em;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+  #pets ul li {
+    font-size: .8em;
+  }
+}
+
+#pets ul li:before {
+  display: inline-block;
+  content: "";
+  border-radius: 50%;
+  height: 22px;
+  width: 22px;
+  border: 1px solid #566D77;
+  margin-right: 10px;
+}
+
+#pets ul li.yes:before {
+  background-color: #98A6AC;
+}
+
+#pets ul li.no:before {
+  background-color: #E1E6E9;
+}
+
+#walks ul li .icon {
+  background-color: #FFF;
+}
+
+#walks div.right {
+  background-image: url("../images/topography-gray@2x.png");
+}
+
+#walks div.right .icon {
+  margin-top: 80px;
+  background-color: #DFEFEF;
+}
+
+#walks div.right hr {
+  width: 10%;
+  background-color: #DFEFEF;
+  height: 3px;
+  margin: 40px auto;
 }

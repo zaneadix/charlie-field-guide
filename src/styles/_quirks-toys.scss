@@ -1,5 +1,6 @@
 
-#quirks, #toys {
+
+#quirks, #toys, #walks {
 
 	p { padding: $fluid-content-padding-small; }
 
@@ -21,13 +22,8 @@
 		.name {
 
 			font-family : $display-text;
-			font-size   : 1.6em;
 			margin-top  : 20px;
 			padding: 0 10px;
-
-			@media (max-width: 1200px) { font-size: 1.4em; }
-
-			@media (max-width: 992px) { font-size: 1.2em; }
 		}
 
 		&:after {
@@ -84,5 +80,20 @@
 		.icon { background-color : #FFF; }
 
 		&:after { border-bottom : 20px solid #FFF; }
+	}
+}
+
+#walks {
+
+	ul { 
+		
+		margin: 0 auto;
+		width: 70%;
+
+		li {
+
+			width: 50%;
+			min-height: 50px;
+		}
 	}
 }
