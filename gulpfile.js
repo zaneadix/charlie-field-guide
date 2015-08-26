@@ -1,11 +1,12 @@
 
-var gulp     = require('gulp'),
-	sass     = require('gulp-sass'),
-	useref   = require('gulp-useref'),
-	plumber  = require('gulp-plumber'),
-	jshint   = require('gulp-jshint'),
-	stylish  = require('jshint-stylish'),
-	connect  = require('gulp-connect');
+var gulp        = require('gulp'),
+	sass        = require('gulp-sass'),
+	useref      = require('gulp-useref'),
+	plumber     = require('gulp-plumber'),
+	jshint      = require('gulp-jshint'),
+	stylish     = require('jshint-stylish'),
+	browserSync = require('browser-sync').create();
+	// connect  = require('gulp-connect');
 
 var src = {
 
@@ -33,13 +34,15 @@ gulp.task('html', function () {
 
 	var assets = useref.assets();
 
+	// console.log(browserSync)
+
 	gulp.src(src.html)
 		.pipe(plumber())
 		.pipe(assets)
 		.pipe(assets.restore())
 		.pipe(useref())
 		.pipe(gulp.dest(dist.root))
-		.pipe(connect.reload());
+		// .pipe(browserSync.reload());
 })
 
 gulp.task('scripts', function () {
@@ -49,7 +52,7 @@ gulp.task('scripts', function () {
 		.pipe(jshint())
   		.pipe(jshint.reporter(stylish))
   		.pipe(gulp.dest(dist.scripts))
-  		.pipe(connect.reload());
+  		// .pipe(browserSync.reload());
 })
 
 gulp.task('styles', function () {
@@ -58,7 +61,7 @@ gulp.task('styles', function () {
 		.pipe(plumber())
 		.pipe(sass({ outputStyle: 'expanded' }))
 		.pipe(gulp.dest(dist.styles))
-		.pipe(connect.reload());
+		.pipe(browserSync.stream());
 })
 
 gulp.task('images', function () {
@@ -69,18 +72,28 @@ gulp.task('images', function () {
 
 gulp.task('connect', function () {
 
-	connect.server({
+	// connect.server({
 
-		root       : dist.root,
-		livereload : true,
-		port       : 7000
-	});
+	// 	root       : dist.root,
+	// 	livereload : true,
+	// 	port       : 7000
+	// });
+	
+
+    browserSync.init({
+
+        server: {
+
+            baseDir: dist.root
+        }
+    });
+
 })
 
 gulp.task('watch', function () {
 
-	gulp.watch(src.html, ['html']);
-	gulp.watch(src.scripts, ['scripts']);
+	gulp.watch(src.html, ['html'], browserSync.reload);
+	gulp.watch(src.scripts, ['scripts'], browserSync.reload);
 	gulp.watch(src.styles, ['styles']);
 })
 

@@ -4,6 +4,17 @@
 
 	p { padding: $fluid-content-padding-small; }
 
+	@media (max-width: 720px) { 
+			
+		ul { 
+
+			margin-top: 15px;
+			width: 75%;
+		}
+
+		p { padding: $fluid-content-padding-tiny; }
+	}
+
 	ul li {
 
 		padding     : 0;
@@ -48,6 +59,36 @@
 
 			&:after { bottom: -5px; }
 		}
+
+		@media (max-width: 720px) {
+
+			min-height: 85px;
+			
+			.name { display: none; }
+
+			.all-name { display: block; }
+
+			hr { display: block; }
+
+			&:after {
+
+				display: none;
+			}
+		}
+	}
+
+	.all-name {
+
+		display    : none;
+		margin-top : 20px;
+	}
+
+	hr {
+		
+		display          : none;
+		background-color : #FFF;
+		height           : 2px;
+		width            : 30px;
 	}
 }
 
@@ -60,6 +101,11 @@
 		width: 20%;
 
 		&:after { border-bottom : 20px solid $oldpoop; }
+	}
+
+	@media (max-width: 720px) {
+
+		.quirks-block { border-bottom: 0px; }
 	}
 }
 
@@ -80,6 +126,16 @@
 		.icon { background-color : #FFF; }
 
 		&:after { border-bottom : 20px solid #FFF; }
+
+		@media (max-width: 720px) { 
+
+			width: 50%;
+		}
+	}
+
+	@media (max-width: 720px) {
+
+		.toys-block { border-bottom: 0px; }
 	}
 }
 
@@ -96,4 +152,6 @@
 			min-height: 50px;
 		}
 	}
+
+	hr { display: block; }
 }

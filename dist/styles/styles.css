@@ -37,6 +37,13 @@ p {
   }
 }
 
+@media (max-width: 720px) {
+  p {
+    margin-top: 20px;
+    font-size: 1em;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   letter-spacing: .25em;
@@ -60,8 +67,33 @@ h1.blocked, h2.blocked, h3.blocked, h4.blocked, h5.blocked, h6.blocked {
   }
 }
 
+@media (max-width: 720px) {
+  h1.blocked, h2.blocked, h3.blocked, h4.blocked, h5.blocked, h6.blocked {
+    border-width: 2px;
+    min-width: 180px;
+  }
+}
+
 h1 {
-  font-size: 4em;
+  font-size: 7.5em;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 6em;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 4.5em;
+  }
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 2.5em;
+  }
 }
 
 h3 {
@@ -74,10 +106,28 @@ h3 {
   }
 }
 
+@media (max-width: 720px) {
+  h3 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 720px) {
+  h4 {
+    font-size: 1em;
+  }
+}
+
 strong {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  strong {
+    font-size: .78em;
+  }
 }
 
 section {
@@ -93,6 +143,12 @@ section {
 @media (max-width: 992px) {
   section {
     padding: 20px 0 50px;
+  }
+}
+
+@media (max-width: 720px) {
+  section {
+    padding: 20px 0;
   }
 }
 
@@ -131,6 +187,13 @@ ul li {
   }
 }
 
+@media (max-width: 720px) {
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 .icon img {
   width: 100%;
 }
@@ -153,11 +216,11 @@ ul li {
   height: 90%;
 }
 
-.icon img.left {
+.icon img.shift-left {
   margin-left: -10%;
 }
 
-.icon img.right {
+.icon img.shift-right {
   margin-right: -10%;
 }
 
@@ -177,7 +240,15 @@ ul li {
   margin-top: 5%;
 }
 
-header {
+@media (max-width: 720px) {
+  .icon img.left,
+  .icon img.right {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+header, footer {
   background-color: #E1E6E9;
   text-transform: uppercase;
   height: 680px;
@@ -185,6 +256,70 @@ header {
   background-image: url("../images/topography@2x.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+header .title, footer .title {
+  margin: 7.21875% auto 0;
+  width: 68.5416667%;
+  height: 71.125%;
+  padding: 80px 0;
+  border: 4px solid #566D77;
+}
+
+header .title h1, footer .title h1 {
+  margin: 10px 0 30px 3%;
+  font-size: 7.5em;
+  font-weight: 700;
+  letter-spacing: .25em;
+}
+
+header .title p, footer .title p {
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 2.4em;
+  letter-spacing: .5em;
+}
+
+@media (max-width: 1200px) {
+  header .title, footer .title {
+    padding: 60px 0;
+  }
+  header .title h1, footer .title h1 {
+    font-size: 6em;
+  }
+  header .title p, footer .title p {
+    font-size: 1.9em;
+  }
+}
+
+@media (max-width: 950px) {
+  header .title, footer .title {
+    padding: 60px 0;
+  }
+  header .title h1, footer .title h1 {
+    font-size: 4.5em;
+  }
+  header .title p, footer .title p {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 720px) {
+  header .title, footer .title {
+    border-width: 0px;
+    margin: 0 auto;
+    width: 90%;
+  }
+  header .title h1, footer .title h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    margin: 0 0 20px 2%;
+  }
+  header .title p, footer .title p {
+    font-size: 1.1em;
+    letter-spacing: .3em;
+    padding: 0;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -197,63 +332,51 @@ header {
 @media (max-width: 950px) {
   header {
     height: 500px;
-    background-size: 130%;
   }
 }
 
-header .title {
-  margin: 7.21875% auto 0;
-  width: 68.5416667%;
-  height: 71.125%;
-  padding: 80px 0;
-  border: 4px solid #566D77;
-}
-
-header .title h1 {
-  margin: 10px 0 30px 3%;
-  font-size: 7.5em;
-  font-weight: 700;
-  letter-spacing: .25em;
-}
-
-header .title p {
-  margin-top: 0;
-  font-weight: 300;
-  font-size: 2.4em;
-  letter-spacing: .5em;
-}
-
-@media (max-width: 1200px) {
-  header .title {
-    padding: 60px 0;
-  }
-  header .title h1 {
-    font-size: 6em;
-  }
-  header .title p {
-    font-size: 1.9em;
-  }
-}
-
-@media (max-width: 950px) {
-  header .title {
-    padding: 60px 0;
-  }
-  header .title h1 {
-    font-size: 4.5em;
-  }
-  header .title p {
-    font-size: 1.4em;
+@media (max-width: 720px) {
+  header {
+    height: 375px;
+    background-size: 240%;
   }
 }
 
 footer {
-  font-family: "Montserrat", sans-serif;
+  height: 640px;
+}
+
+@media (max-width: 1200px) {
+  footer {
+    height: 510px;
+    background-size: 130%;
+  }
+}
+
+@media (max-width: 950px) {
+  footer {
+    height: 460px;
+  }
+}
+
+@media (max-width: 720px) {
+  footer {
+    height: 335px;
+    background-size: 240%;
+  }
 }
 
 footer p {
   font-size: 1.2em;
   margin: 80px 0;
+}
+
+footer .title {
+  margin: 7.21875% auto 0;
+  width: 58.5416667%;
+  height: 70.125%;
+  padding: 80px 0;
+  border: 4px solid #566D77;
 }
 
 nav {
@@ -276,6 +399,12 @@ nav {
 @media (max-width: 950px) {
   nav {
     top: 500px;
+  }
+}
+
+@media (max-width: 720px) {
+  nav {
+    top: 0;
   }
 }
 
@@ -326,6 +455,39 @@ nav #progress .progress-block {
   float: left;
 }
 
+@media (max-width: 720px) {
+  nav {
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+    top: 0;
+    left: 0;
+  }
+  nav ul {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #65FBE2;
+    height: 9999px;
+  }
+  nav ul li {
+    padding: 0;
+    width: 50%;
+    font-size: 1.4em;
+    display: block;
+    width: 100%;
+  }
+  nav ul li a {
+    margin: 13px 0;
+    color: #566D77;
+  }
+  nav #progress {
+    display: none;
+  }
+}
+
 #foreword {
   padding-top: 135px;
 }
@@ -352,8 +514,18 @@ nav #progress .progress-block {
   }
 }
 
+@media (max-width: 720px) {
+  #foreword {
+    padding-top: 20px;
+  }
+  #foreword p {
+    padding: 0 10px;
+  }
+}
+
 #stats {
   background-color: #E1E6E9;
+  padding-bottom: 40px;
 }
 
 #stats .stats {
@@ -378,6 +550,12 @@ nav #progress .progress-block {
   }
 }
 
+@media (max-width: 720px) {
+  #stats .stats li {
+    margin-top: 20px;
+  }
+}
+
 #stats .stats li .stat, #stats .stats li .name {
   display: block;
 }
@@ -397,6 +575,12 @@ nav #progress .progress-block {
 @media (max-width: 992px) {
   #stats .stats li .stat {
     font-size: 2.7em;
+  }
+}
+
+@media (max-width: 720px) {
+  #stats .stats li .stat {
+    font-size: 1.6em;
   }
 }
 
@@ -455,6 +639,16 @@ nav #progress .progress-block {
   padding: 0 80px;
 }
 
+@media (max-width: 720px) {
+  #quirks ul, #toys ul, #walks ul {
+    margin-top: 15px;
+    width: 75%;
+  }
+  #quirks p, #toys p, #walks p {
+    padding: 0 10px;
+  }
+}
+
 #quirks ul li, #toys ul li, #walks ul li {
   padding: 0;
   min-height: 210px;
@@ -505,6 +699,36 @@ nav #progress .progress-block {
   bottom: -5px;
 }
 
+@media (max-width: 720px) {
+  #quirks ul li, #toys ul li, #walks ul li {
+    min-height: 85px;
+  }
+  #quirks ul li .name, #toys ul li .name, #walks ul li .name {
+    display: none;
+  }
+  #quirks ul li .all-name, #toys ul li .all-name, #walks ul li .all-name {
+    display: block;
+  }
+  #quirks ul li hr, #toys ul li hr, #walks ul li hr {
+    display: block;
+  }
+  #quirks ul li:after, #toys ul li:after, #walks ul li:after {
+    display: none;
+  }
+}
+
+#quirks .all-name, #toys .all-name, #walks .all-name {
+  display: none;
+  margin-top: 20px;
+}
+
+#quirks hr, #toys hr, #walks hr {
+  display: none;
+  background-color: #FFF;
+  height: 2px;
+  width: 30px;
+}
+
 #quirks .quirks-block {
   border-bottom: 2px solid #566D77;
 }
@@ -515,6 +739,12 @@ nav #progress .progress-block {
 
 #quirks ul li:after {
   border-bottom: 20px solid #566D77;
+}
+
+@media (max-width: 720px) {
+  #quirks .quirks-block {
+    border-bottom: 0px;
+  }
 }
 
 #toys {
@@ -542,6 +772,18 @@ nav #progress .progress-block {
   border-bottom: 20px solid #FFF;
 }
 
+@media (max-width: 720px) {
+  #toys ul li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 720px) {
+  #toys .toys-block {
+    border-bottom: 0px;
+  }
+}
+
 #walks ul {
   margin: 0 auto;
   width: 70%;
@@ -550,6 +792,10 @@ nav #progress .progress-block {
 #walks ul li {
   width: 50%;
   min-height: 50px;
+}
+
+#walks hr {
+  display: block;
 }
 
 #tricks {
@@ -575,6 +821,12 @@ nav #progress .progress-block {
   }
 }
 
+@media (max-width: 720px) {
+  #tricks p {
+    padding: 0 10px;
+  }
+}
+
 #tricks .trick {
   height: 300px;
   box-sizing: border-box;
@@ -592,9 +844,26 @@ nav #progress .progress-block {
   }
 }
 
+@media (max-width: 720px) {
+  #tricks .trick {
+    min-height: 270px;
+    padding: 0 5%;
+  }
+}
+
 @media (max-width: 992px) {
   #tricks .trick .detail .left {
     float: left;
+  }
+}
+
+@media (max-width: 720px) {
+  #tricks .trick .detail .left {
+    width: 100%;
+    float: none;
+  }
+  #tricks .trick .detail .left h4 {
+    padding: 0 0px;
   }
 }
 
@@ -603,6 +872,14 @@ nav #progress .progress-block {
     float: right;
     width: 50%;
     margin-top: 50px;
+  }
+}
+
+@media (max-width: 720px) {
+  #tricks .trick .detail .right {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
   }
 }
 
@@ -640,6 +917,13 @@ nav #progress .progress-block {
   #tricks .trick .detail .icon {
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 720px) {
+  #tricks .trick .detail .icon {
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
 }
 
@@ -705,6 +989,12 @@ nav #progress .progress-block {
 @media (max-width: 992px) {
   #tricks .trick .detail p {
     opacity: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  #tricks .trick .detail p {
+    margin-bottom: 20px;
   }
 }
 
@@ -794,6 +1084,29 @@ nav #progress .progress-block {
   }
 }
 
+@media (max-width: 720px) {
+  #manners div.left,
+  #manners div.right,
+  #eats div.left,
+  #eats div.right,
+  #walks div.left,
+  #walks div.right,
+  #pets div.left,
+  #pets div.right {
+    padding: 20px 0;
+  }
+  #manners div.left p,
+  #manners div.right p,
+  #eats div.left p,
+  #eats div.right p,
+  #walks div.left p,
+  #walks div.right p,
+  #pets div.left p,
+  #pets div.right p {
+    padding: 0 10px;
+  }
+}
+
 #manners div.right, #eats div.left, #pets div.left, #walks div.right {
   background-color: #DFEFEF;
   height: 100%;
@@ -836,6 +1149,10 @@ nav #progress .progress-block {
   border-color: #566D77;
 }
 
+#manners h2 {
+  margin-top: 140px;
+}
+
 #eats h4, #manners h4 {
   margin-top: 30px;
   text-transform: none;
@@ -856,17 +1173,13 @@ nav #progress .progress-block {
   }
 }
 
-#manners h2 {
-  margin-top: 50px;
-}
-
 #eats img {
   max-width: 300px;
   height: auto;
 }
 
 #eats h2 {
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 #eats .title {
@@ -878,8 +1191,14 @@ nav #progress .progress-block {
 }
 
 #pets .right {
-  padding-bottom: 3000px;
-  margin-bottom: -3000px;
+  min-height: 460px;
+}
+
+@media (max-width: 992px) {
+  #pets .right {
+    min-height: 0;
+    padding-bottom: 0;
+  }
 }
 
 #pets img {
@@ -918,7 +1237,7 @@ nav #progress .progress-block {
   font-size: 1.2em;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 1200px) {

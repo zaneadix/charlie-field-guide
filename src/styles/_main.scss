@@ -4,9 +4,12 @@
 $display-text       : 'Montserrat', sans-serif;
 $content-text       : 'Sorts Mill Goudy', serif;
 
+$nav-height : 75px;
+
 $nav-top			: 680px;
 $nav-top-med		: 550px;
 $nav-top-small		: 500px;
+$nav-top-tiny		: 300px;
 
 $content-size       : 1.1em;
 $content-size-med   : 1em;
@@ -15,12 +18,14 @@ $content-size-small : .9em;
 $section-padding       : 60px 0 70px;
 $section-padding-med   : 40px 0 60px;
 $section-padding-small : 20px 0 50px;
+$section-padding-tiny  : 20px 0;
 
-$content-padding       : 0 60px;
+$content-padding: 0 60px;
 
 $fluid-content-padding       : 0 200px;
 $fluid-content-padding-med   : 0 140px;
 $fluid-content-padding-small : 0 80px;
+$fluid-content-padding-tiny  : 0 10px;
 
 $content-margin-top       : 40px;
 $content-margin-top-med   : 30px;
@@ -65,6 +70,12 @@ p {
 		margin-top : $content-margin-top-small; 
 		font-size  : $content-size-small;
 	}
+
+	@media (max-width: 720px) { 
+
+		margin-top : $content-margin-top-small; 
+		font-size  : $content-size-med;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,16 +100,38 @@ h1, h2, h3, h4, h5, h6 {
 			padding-left : .9em;
 			min-width    : 220px;
 		}
+
+		@media (max-width: 720px) { 
+
+			border-width : 2px;
+			min-width    : 180px;
+		}
 	}
 }
 
-h1 { font-size: 4em; }
+h1 { 
+
+	font-size: 7.5em;
+
+	@media (max-width: 1200px) { font-size: 6em;  }
+
+	@media (max-width: 992px) { font-size: 4.5em;  }
+
+	@media (max-width: 720px) { font-size: 2.5em;  }
+}
 
 h3 { 
 
 	font-size: 1.75em; 
 	
 	@media (max-width: 992px) { font-size: 1.4em;  }
+
+	@media (max-width: 720px) { font-size: 1.2em;  }
+}
+
+h4 {
+
+	@media (max-width: 720px) { font-size: 1em;  }
 }
 
 strong {
@@ -106,6 +139,11 @@ strong {
 	font-weight: 700;
 	font-family: $display-text;
 	text-transform: uppercase;
+
+	@media (max-width: 720px) { 
+
+		font-size: .78em;
+	}
 }
 
 section { 
@@ -115,6 +153,8 @@ section {
 	@media (max-width: 1200px) { padding: $section-padding-med; }
 
 	@media (max-width: 992px) { padding: $section-padding-small; }
+
+	@media (max-width: 720px) { padding: $section-padding-tiny; }
 }
 
 ul {
@@ -152,6 +192,12 @@ ul {
 		height : 90px;
 	}
 
+	@media (max-width: 720px) { 
+		
+		width  : 60px;
+		height : 60px;
+	}
+
 	img {
 
 		width: 100%;
@@ -175,9 +221,9 @@ ul {
 			height: 90%;
 		}
 
-		&.left { margin-left: -10%; }
+		&.shift-left { margin-left: -10%; }
 
-		&.right { margin-right: -10%; }
+		&.shift-right { margin-right: -10%; }
 
 		&.up { margin-top: -20%; }
 
@@ -186,6 +232,16 @@ ul {
 		&.down { margin-top: 20%; }
 
 		&.down-half { margin-top: 5%; }
+
+		@media (max-width: 720px) { 
+
+			&.left,
+			&.right {
+				
+				margin-left: 0px;
+				margin-right: 0px;
+			} 
+		}
 	}
 }
 

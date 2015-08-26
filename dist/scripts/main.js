@@ -171,12 +171,15 @@
 
 		$('.toys li').removeClass('selected');
 
-		var $this = $(this),
-			$text  = $this.find('.text');
+		var $this    = $(this),
+			$name    = $this.find('.name'),
+			$text    = $this.find('.text');
+
 
 		$this.addClass('selected');
 
 		$('#toy-text').text($text.text());
+		$('#toys .all-name').text($name.text());
 
 		setNavBlocks();
 	});
@@ -220,7 +223,7 @@
 
 			$trick.height($trick.width());
 
-		} else {
+		} else if ($window.width() > 720){
 
 			$trick.height(200);
 		}

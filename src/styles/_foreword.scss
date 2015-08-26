@@ -18,4 +18,11 @@
 
 		p { padding: $fluid-content-padding-small; }
 	}
+
+	@media (max-width: 720px) { 
+
+		padding-top: 20px;
+
+		p { padding: $fluid-content-padding-tiny; }
+	}
 }

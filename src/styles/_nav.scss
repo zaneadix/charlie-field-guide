@@ -14,6 +14,8 @@ nav {
 
 	@media (max-width: 950px) { top: $nav-top-small; }
 
+	@media (max-width: 720px) { top: 0; }
+
 	ul {
 
 		margin-top: 0;
@@ -24,10 +26,10 @@ nav {
 
 			a {
 
-				display : inline-block;
-				color   : #FFF;
-				margin  : 24px auto 0;
-				font-size: .9em;
+				display   : inline-block;
+				color     : #FFF;
+				margin    : 24px auto 0;
+				font-size : .9em;
 
 				&:hover {
 
@@ -67,5 +69,42 @@ nav {
 			width: 0;
 			float: left;
 		}
+	}
+
+	@media (max-width: 720px) {
+
+		position: fixed;
+		width: 100%;
+		z-index: 200;
+		top: 0;
+		left: 0;
+
+		ul { 
+			
+			position         : absolute;
+			top              : 0;
+			bottom           : 0;
+			right            : 0;
+			left             : 0;
+			background-color : $dogdive;
+			height           : 9999px;
+
+			li {
+				
+				padding   : 0;
+				width     : 50%;
+				font-size : 1.4em;
+				display   : block;
+				width     : 100%;
+
+				a {
+					
+					margin: 13px 0;
+					color: $oldpoop;
+				}
+			}
+		}
+
+		#progress { display: none;}
 	}
 }

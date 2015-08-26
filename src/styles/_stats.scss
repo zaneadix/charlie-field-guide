@@ -2,6 +2,7 @@
 #stats {
 
 	background-color: $oldsock;
+	padding-bottom: 40px;
 
 	.stats {
 
@@ -10,12 +11,15 @@
 
 		@media (max-width: 992px) { margin-top: 0px;  }
 
+
 		li {
 
 			display : block;
 			float   : left;
 
-			@media (max-width: 992px) { margin-top: 40px;  }
+			@media (max-width: 992px) { margin-top: 40px; }
+
+			@media (max-width: 720px) { margin-top: 20px; }
 
 			.stat, .name { display: block; }
 
@@ -25,9 +29,11 @@
 				font-size   : 4em;
 				font-weight : 700;
 
-				@media (max-width: 1200px) { font-size: 3.4em;  }
+				@media (max-width: 1200px) { font-size: 3.4em; }
 
-				@media (max-width: 992px) { font-size: 2.7em;  }
+				@media (max-width: 992px) { font-size: 2.7em; }
+
+				@media (max-width: 720px) { font-size: 1.6em; }
 
 				.sub {
 
@@ -37,9 +43,9 @@
 
 			.name {
 
-				@media (max-width: 1200px) { font-size: .9em;  }
+				@media (max-width: 1200px) { font-size: .9em; }
 
-				@media (max-width: 992px) { font-size: .8em;  }
+				@media (max-width: 992px) { font-size: .8em; }
 			}
 
 			&.age { width: 8%; }

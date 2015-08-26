@@ -13,6 +13,8 @@
 		@media (max-width: 1200px) { padding: $fluid-content-padding-med;}
 
 		@media (max-width: 992px) { padding: $fluid-content-padding-small; }
+
+		@media (max-width: 720px) { padding: $fluid-content-padding-tiny; }
 	}
 
 	.trick {
@@ -31,14 +33,23 @@
 			padding : 0 20%;
 		}
 
+		@media (max-width: 720px) { 
+
+			min-height : 270px; 
+			padding    : 0 5%;
+		}
+
 		.detail {
 
 			.left { 
 
-				@media (max-width: 992px) { 
+				@media (max-width: 992px) { float: left; }
 
-					float: left;
-					// width: 30%;
+				@media (max-width: 720px) { 
+					
+					width: 100%;
+					float: none;
+					h4 { padding: 0 0px; }
 				}
 			}
 
@@ -49,6 +60,13 @@
 					float: right; 
 					width: 50%;
 					margin-top: 50px;
+				}
+
+				@media (max-width: 720px) { 
+
+					float: none; 
+					width: 100%;
+					margin-top: 10px;
 				}
 			}
 
@@ -69,6 +87,12 @@
 
 					margin-top    : 30px;
 					margin-bottom : 30px; 
+				}
+
+				@media (max-width: 720px) { 
+
+					margin-top    : 20px;
+					margin-bottom : 15px; 
 				}
 			}
 
@@ -103,6 +127,8 @@
 				@media (max-width: 1150px) { line-height: 1.9em; }
 
 				@media (max-width: 992px) { opacity: 1; }
+
+				@media (max-width: 720px) { margin-bottom: 20px; }
 
 			}
 		}
