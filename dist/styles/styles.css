@@ -1270,6 +1270,7 @@ nav #progress .progress-block {
 
 #walks div.right {
   background-image: url("../images/topography-gray@2x.png");
+  background-color: #FFF;
 }
 
 #walks div.right .icon {
