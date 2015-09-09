@@ -337,8 +337,15 @@ header .title p, footer .title p {
 
 @media (max-width: 720px) {
   header {
-    height: 375px;
+    height: 320px;
     background-size: 240%;
+  }
+  header .title {
+    padding-top: 40px;
+    margin-top: 75px;
+  }
+  header .title p {
+    font-weight: 700;
   }
 }
 
@@ -361,7 +368,7 @@ footer {
 
 @media (max-width: 720px) {
   footer {
-    height: 335px;
+    height: 200px;
     background-size: 240%;
   }
 }
@@ -377,6 +384,20 @@ footer .title {
   height: 70.125%;
   padding: 80px 0;
   border: 4px solid #566D77;
+}
+
+@media (max-width: 720px) {
+  footer .title {
+    border-width: 0px;
+    margin: 0 auto;
+    width: 90%;
+    padding: 60px 0;
+  }
+  footer .title h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    margin: 0 0 20px 2%;
+  }
 }
 
 nav {
@@ -408,22 +429,23 @@ nav {
   }
 }
 
-nav ul {
+nav #navigation {
   margin-top: 0;
+  transition: opacity 0.7s;
 }
 
-nav ul li {
+nav #navigation li {
   width: 11.111111%;
 }
 
-nav ul li a {
+nav #navigation li a {
   display: inline-block;
   color: #FFF;
   margin: 24px auto 0;
   font-size: .9em;
 }
 
-nav ul li a:hover {
+nav #navigation li a:hover {
   text-decoration: none;
   color: #65FBE2;
 }
@@ -434,6 +456,32 @@ nav.sticky {
   z-index: 200;
   top: 0;
   left: 0;
+}
+
+nav #menu-toggle {
+  width: 30px;
+  float: right;
+  margin-right: 20px;
+  margin-top: 17px;
+  display: none;
+  cursor: pointer;
+}
+
+nav #menu-toggle li {
+  display: block;
+  height: 4px;
+  width: 100%;
+  margin-bottom: 6px;
+  background-color: #FFF;
+  border-radius: 2px;
+}
+
+nav #menu-toggle li:last-child {
+  margin-bottom: 0;
+}
+
+nav #menu-toggle:hover li, nav #menu-toggle:focus li {
+  background-color: #65FBE2;
 }
 
 nav #progress, nav .progress-block {
@@ -462,26 +510,48 @@ nav #progress .progress-block {
     z-index: 200;
     top: 0;
     left: 0;
+    height: 60px;
   }
-  nav ul {
-    position: absolute;
-    top: 0;
+  nav #navigation {
+    top: -1000px;
     bottom: 0;
     right: 0;
     left: 0;
     background-color: #65FBE2;
-    height: 9999px;
+    max-height: 0px;
+    opacity: 0;
+    padding-top: 40px;
+    transition: opacity 0.7s, padding-top 0.7s;
   }
-  nav ul li {
+  nav #navigation li {
     padding: 0;
     width: 50%;
     font-size: 1.4em;
     display: block;
     width: 100%;
+    max-height: 0px;
+    top: 0;
+    transition: opacity 1s;
   }
-  nav ul li a {
-    margin: 13px 0;
+  nav #navigation li a {
+    margin: 10px 0;
     color: #566D77;
+  }
+  nav #navigation li a:hover {
+    color: #566D77;
+  }
+  nav #navigation.on {
+    opacity: 1.0;
+    padding-top: 0px;
+    max-height: 9999px;
+    height: 9999px;
+  }
+  nav #navigation.on li {
+    opacity: 100%;
+    max-height: 100px;
+  }
+  nav #menu-toggle {
+    display: block;
   }
   nav #progress {
     display: none;
@@ -1115,6 +1185,7 @@ nav #progress .progress-block {
   background-image: url("../images/topography-blue@2x.png");
   background-size: 240%;
   background-repeat: no-repeat;
+  background-position: right 0px top;
 }
 
 #manners div.left, #walks div.left {

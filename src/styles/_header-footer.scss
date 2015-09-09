@@ -74,8 +74,6 @@ header, footer {
 
 header {
 
-	// padding-top: 82px;
-
 	@media (max-width: 1200px) { 
 
 		height          : $nav-top-med; 
@@ -89,8 +87,15 @@ header {
 
 	@media (max-width: 720px) {
 
-		height: $nav-top-tiny + $nav-height;
+		height: $nav-top-tiny + $nav-height-small;
 		background-size : 240%;
+
+		.title {
+			padding-top: 40px;
+			margin-top: $nav-height;
+
+			p { font-weight: 700; }
+		}
 	}
 }
 
@@ -112,7 +117,7 @@ footer {
 
 	@media (max-width: 720px) {
 
-		height: $nav-top-tiny - 40px + $nav-height;
+		height: 200px;
 		background-size : 240%;
 	}
 
@@ -129,19 +134,19 @@ footer {
 		padding : 80px 0;
 		border  : 4px solid $oldpoop;
 
-		// h1 {
-			
-		// 	margin         : 10px 0 30px 3%;
-		// 	font-size      : 7.5em;
-		// 	font-weight    : 700;
-		// 	letter-spacing : .25em;
-		// }
+		@media (max-width: 720px) {
 
-		// p {
-		// 	margin-top: 0;
-		// 	font-weight    : 300;
-		// 	font-size      : 2.4em;
-		// 	letter-spacing : .5em;
-		// }
+			border-width : 0px;
+			margin       : 0 auto;
+			width        : 90%;
+			padding      : 60px 0;
+
+			h1 { 
+
+				font-size     : 2.5em; 
+				margin-bottom : 20px;
+				margin        : 0 0 20px 2%;
+			};
+		}
 	}
 }

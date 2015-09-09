@@ -143,6 +143,11 @@
 		monitorProgress();
 	}
 
+	$('#menu-toggle').on('click', function (e) {
+
+		$nav.find('#navigation').toggleClass('on');
+	});
+
 
 	/**
 	 *	QUIRKS
