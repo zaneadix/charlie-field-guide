@@ -9,10 +9,11 @@
 	 */
 	
 	var $document        = $(document),
-		$window 		 = $(window),
+		$body            = $('html, body'),
+		$window          = $(window),
 		$header          = $('header'),
 		$nav             = $('nav'),
-		$progressBar	 = $nav.find('.percentage'),
+		$progressBar     = $nav.find('.percentage'),
 		$quirks          = $('.quirks li'),
 		$forewordSection = $('#foreword'),
 		$toysSection     = $('#toys');
@@ -48,11 +49,15 @@
 
 		var offset = (scrollTo == 'foreword' ? 0 : progressOffset);
 
-	    $('html, body').animate({
+	    $body.animate({
 
 	        scrollTop: $('#' + scrollTo).offset().top - offset
 
 	    }, 1000);
+
+	    $nav.find('#navigation').removeClass('on');
+
+	    $body.removeClass('no-scroll');
 
 	});
 
@@ -145,7 +150,12 @@
 
 	$('#menu-toggle').on('click', function (e) {
 
+		$body.toggleClass('no-scroll');
+
 		$nav.find('#navigation').toggleClass('on');
+		// if ($nav.find('#navigation').hasClass('on')) {
+
+		// }
 	});
 
 

@@ -98,9 +98,22 @@
 
 	ul li {
 
+		&:after { border-bottom : 20px solid $oldpoop; }
+
 		width: 20%;
 
-		&:after { border-bottom : 20px solid $oldpoop; }
+		@media (max-width: 720px) { 
+
+			width: 33.33%;
+
+			&:nth-child(n+4) { 
+
+				margin-top: -20px;
+				width: 34%; 
+			}
+
+			&:nth-child(4) { margin-left: 16% }
+		}
 	}
 
 	@media (max-width: 720px) {

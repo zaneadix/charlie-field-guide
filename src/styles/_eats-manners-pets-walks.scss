@@ -203,6 +203,23 @@
 
 	ul li .icon { background-color: #FFF; }
 
+	.icon img {
+
+		&.shift-left {
+
+			margin-left: -30%;
+		}
+
+		&.down {
+
+			margin-top: 5%;
+		}
+
+		&.up {
+			margin-top: -7%;
+		}
+	}
+
 	div.right {
 
 		background-image: $gray-background-url;
@@ -211,7 +228,7 @@
 		.icon { 
 
 			margin-top: 80px;
-			background-color: $seabone; 
+			background-color: $seabone;
 		}
 
 
@@ -220,7 +237,53 @@
 			width: 10%;
 			background-color: $seabone;
 			height: 3px;
-			margin: 40px auto;
+			margin: 20px auto;
 		}
+
+		@media (max-width: 992px) {
+
+			.icon { margin-top: 20px; }
+
+			.text { margin-bottom: 30px; }
+		}
+	}
+
+	div.left {
+
+		@media (max-width: 992px) { 
+			
+			min-height: 450px;
+
+			li {
+				width: 25%;
+
+				.split {
+
+					display: block;
+				}
+			}
+		}
+
+		@media (max-width: 720px) { 
+			
+			min-height: 390px;
+
+			ul { 
+
+				padding-top: 10px;
+				padding-bottom: 20px;
+			}
+
+			li { 
+		
+				height : 80px;
+			}
+		}
+
+		@media (max-width: 600px) { min-height: 390px;}
+
+		@media (max-width: 550px) { min-height: 420px;}
+
+		@media (max-width: 445px) { min-height: 454px;}
 	}
 }

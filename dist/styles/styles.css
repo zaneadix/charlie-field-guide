@@ -16,6 +16,12 @@ body, html {
   }
 }
 
+body .no-scroll, html .no-scroll {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 p {
   padding: 0 60px;
   margin-top: 40px;
@@ -112,7 +118,7 @@ h3 {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 992px) {
   h4 {
     font-size: 1em;
   }
@@ -443,6 +449,7 @@ nav #navigation li a {
   color: #FFF;
   margin: 24px auto 0;
   font-size: .9em;
+  cursor: pointer;
 }
 
 nav #navigation li a:hover {
@@ -514,6 +521,7 @@ nav #progress .progress-block {
   }
   nav #navigation {
     top: -1000px;
+    display: none;
     bottom: 0;
     right: 0;
     left: 0;
@@ -541,6 +549,7 @@ nav #progress .progress-block {
     color: #566D77;
   }
   nav #navigation.on {
+    display: block;
     opacity: 1.0;
     padding-top: 0px;
     max-height: 9999px;
@@ -809,6 +818,19 @@ nav #progress .progress-block {
 
 #quirks ul li:after {
   border-bottom: 20px solid #566D77;
+}
+
+@media (max-width: 720px) {
+  #quirks ul li {
+    width: 33.33%;
+  }
+  #quirks ul li:nth-child(n+4) {
+    margin-top: -20px;
+    width: 34%;
+  }
+  #quirks ul li:nth-child(4) {
+    margin-left: 16%;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1339,6 +1361,18 @@ nav #progress .progress-block {
   background-color: #FFF;
 }
 
+#walks .icon img.shift-left {
+  margin-left: -30%;
+}
+
+#walks .icon img.down {
+  margin-top: 5%;
+}
+
+#walks .icon img.up {
+  margin-top: -7%;
+}
+
 #walks div.right {
   background-image: url("../images/topography-gray@2x.png");
   background-color: #FFF;
@@ -1353,5 +1387,57 @@ nav #progress .progress-block {
   width: 10%;
   background-color: #DFEFEF;
   height: 3px;
-  margin: 40px auto;
+  margin: 20px auto;
+}
+
+@media (max-width: 992px) {
+  #walks div.right .icon {
+    margin-top: 20px;
+  }
+  #walks div.right .text {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  #walks div.left {
+    min-height: 450px;
+  }
+  #walks div.left li {
+    width: 25%;
+  }
+  #walks div.left li .split {
+    display: block;
+  }
+}
+
+@media (max-width: 720px) {
+  #walks div.left {
+    min-height: 390px;
+  }
+  #walks div.left ul {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  #walks div.left li {
+    height: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  #walks div.left {
+    min-height: 390px;
+  }
+}
+
+@media (max-width: 550px) {
+  #walks div.left {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 445px) {
+  #walks div.left {
+    min-height: 454px;
+  }
 }
