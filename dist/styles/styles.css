@@ -247,8 +247,7 @@ ul li {
 }
 
 @media (max-width: 720px) {
-  .icon img.left,
-  .icon img.right {
+  .icon img.left, .icon img.right {
     margin-left: 0px;
     margin-right: 0px;
   }
@@ -259,7 +258,6 @@ header, footer {
   text-transform: uppercase;
   height: 680px;
   color: #566D77;
-  background-image: url("../images/topography@2x.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -437,7 +435,7 @@ nav {
 
 nav #navigation {
   margin-top: 0;
-  transition: opacity 0.7s;
+  transition: opacity .7s;
 }
 
 nav #navigation li {
@@ -529,7 +527,7 @@ nav #progress .progress-block {
     max-height: 0px;
     opacity: 0;
     padding-top: 40px;
-    transition: opacity 0.7s, padding-top 0.7s;
+    transition: opacity .7s, padding-top .7s;
   }
   nav #navigation li {
     padding: 0;
@@ -704,12 +702,7 @@ nav #progress .progress-block {
 }
 
 @media (max-width: 992px) {
-  #stats .stats li.age,
-  #stats .stats li.length,
-  #stats .stats li.strength,
-  #stats .stats li.weight,
-  #stats .stats li.colors,
-  #stats .stats li.breed {
+  #stats .stats li.age, #stats .stats li.length, #stats .stats li.strength, #stats .stats li.weight, #stats .stats li.colors, #stats .stats li.breed {
     width: 33.33333%;
   }
 }
@@ -766,8 +759,8 @@ nav #progress .progress-block {
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  -webkit-transition: bottom 0.2s;
-  transition: bottom 0.2s;
+  -webkit-transition: bottom .2s;
+  transition: bottom .2s;
 }
 
 #quirks ul li.selected .icon, #toys ul li.selected .icon, #walks ul li.selected .icon {
@@ -926,7 +919,7 @@ nav #progress .progress-block {
   border-right: 1px #E1E6E9 solid;
   border-left: 1px #E1E6E9 solid;
   overflow: hidden;
-  transition: all 0.7s;
+  transition: all .7s;
 }
 
 @media (max-width: 992px) {
@@ -1204,7 +1197,6 @@ nav #progress .progress-block {
   height: 100%;
   padding-bottom: 3000px;
   margin-bottom: -3000px;
-  background-image: url("../images/topography-blue@2x.png");
   background-size: 240%;
   background-repeat: no-repeat;
   background-position: right 0px top;
@@ -1374,7 +1366,6 @@ nav #progress .progress-block {
 }
 
 #walks div.right {
-  background-image: url("../images/topography-gray@2x.png");
   background-color: #FFF;
 }
 
